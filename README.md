@@ -4,6 +4,10 @@ Custom Commitizen parser for user-specified legacy change types. The parser util
 
 While old change types will appear in the Changelog, the user will be prevented from using them in new commits. This is the reverse of the [`revert`/`chore` logic](https://github.com/commitizen-tools/commitizen#why-are-revert-and-chore-valid-types-in-the-check-pattern-of-cz-conventional_commits-but-not-types-we-can-select) from commitizen that allows use of those commit types, but won't display them in the changelog
 
+## Alternatives
+
+This customization only works when old commits use the `<change_type>: <message>` format that can be parsed by commitizen. If that doesn't fit your use case, you may want to try out the [incremental](https://commitizen-tools.github.io/commitizen/changelog/#incremental) which doesn't modify existing portions of a `CHANGELOG`
+
 ## Usage
 
 ### Configuration
