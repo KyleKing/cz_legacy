@@ -26,21 +26,14 @@ class LegacyCz(ConventionalCommitsCz):
         cz_legacy_map = self.config.settings.get("cz_legacy_map")
         if not cz_legacy_map:
             raise RuntimeError(f"User must specify a `cz_legacy_map` dict in `[tool.commitizen]`. Example: {EXAMPLE}")
-        self.joined_types = '|'.join([*cz_legacy_map.keys()])
+        joined_types = '|'.join([*cz_legacy_map.keys()])
 
-        self.commit_parser = defaults.commit_parser.replace('<change_type>', f'<change_type>{self.joined_types}|')
+        self.commit_parser = defaults.commit_parser.replace('<change_type>', f'<change_type>{joined_types}|')
         self.change_type_map = {**self.change_type_map, **cz_legacy_map}
 
-        extended_pattern = defaults.bump_pattern.replace('refactor', f'refactor|{self.joined_types}')
+        extended_pattern = defaults.bump_pattern.replace('refactor', f'refactor|{joined_types}')
         self.bump_pattern = extended_pattern
         self.changelog_pattern = extended_pattern
-
-    def schema_pattern(self) -> str:
-        PATTERN = (
-            fr"({self.joined_types}|build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert|bump)!?"
-            r"(\(\S+\))?:(\s.*)"
-        )
-        return PATTERN
 
 
 discover_this = LegacyCz
