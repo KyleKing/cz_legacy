@@ -20,11 +20,12 @@ name = "cz_legacy"
 version = "0.1.0"
 description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
 license = "MIT"
-authors = [ "Kyle King <https://github.com/KyleKing>",]
+authors = [ "Kyle King <dev.act.kyle@gmail.com>",]
 maintainers = []
-readme = "README.md"
 repository = "https://github.com/kyleking/cz_legacy"
 documentation = "https://github.com/kyleking/cz_legacy"
+readme = "README.md"
+include = [ "LICENSE.md",]
 keywords = ["commitizen", "conventional", "commits", "git"]
 classifiers = [
     "License :: OSI Approved :: MIT License",
