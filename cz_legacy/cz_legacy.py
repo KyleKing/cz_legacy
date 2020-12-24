@@ -3,8 +3,7 @@
 from commitizen import defaults
 from commitizen.cz.conventional_commits.conventional_commits import ConventionalCommitsCz
 
-EXAMPLE = """
-[tool.commitizen]
+EXAMPLE = """[tool.commitizen]
 name = "cz_legacy"
 # Other tool.commitizen configuration options
 
@@ -25,7 +24,7 @@ class _LegacyCz(ConventionalCommitsCz):
         # Read the user-specified legacy change types (ct)
         cz_legacy_map = self.config.settings.get("cz_legacy_map")
         if not cz_legacy_map:
-            raise RuntimeError(f"User must specify a `cz_legacy_map` dict in `[tool.commitizen]`. Example: {EXAMPLE}")
+            raise RuntimeError(f"User must specify a `cz_legacy_map` dict in `[tool.commitizen]`. Example:\n{EXAMPLE}")
         joined_types = '|'.join([*cz_legacy_map.keys()])
 
         self.commit_parser = defaults.commit_parser.replace('<change_type>', f'<change_type>{joined_types}|')

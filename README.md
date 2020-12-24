@@ -6,7 +6,7 @@ While old change types will appear in the Changelog, the user will be prevented 
 
 ## Alternatives
 
-This customization only works when old commits use the `<change_type>: <message>` format that can be parsed by commitizen. If that doesn't fit your use case, you may want to try out the [incremental](https://commitizen-tools.github.io/commitizen/changelog/#incremental) which doesn't modify existing portions of a `CHANGELOG`
+This customization only works when old commits use the `<change_type>: <message>` format that can be parsed by commitizen. If that doesn't fit your use case, you may want to try out [incremental](https://commitizen-tools.github.io/commitizen/changelog/#incremental) which doesn't modify existing portions of a `CHANGELOG`
 
 ## Usage
 
