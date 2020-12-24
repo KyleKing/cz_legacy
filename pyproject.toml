@@ -39,7 +39,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/kyleking/cz_legacy/issues"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.6.1"
 commitizen = "*"
 
 [tool.poetry.dev-dependencies]
