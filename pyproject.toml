@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.0.1"
+version = "0.1.0"
 tag_format = "$version"
 version_files = [ "pyproject.toml", "cz_legacy/__init__.py",]
 
@@ -17,7 +17,7 @@ line_length = 120
 
 [tool.poetry]
 name = "cz_legacy"
-version = "0.0.1"
+version = "0.1.0"
 description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
 license = "MIT"
 authors = [ "Kyle King <https://github.com/KyleKing>",]
