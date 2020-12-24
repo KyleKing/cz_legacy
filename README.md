@@ -10,6 +10,10 @@ This customization only works when old commits use the `<change_type>: <message>
 
 ## Usage
 
+### Install
+
+Install the package from PyPi: `pip install cz_legacy` or from git: `pip install git+https://github.com/KyleKing/cz_legacy.git@main`
+
 ### Configuration
 
 At minimum, you must have the `name = "cz_legacy"` and `[tool.commitizen.cz_legacy_map]` in your configuration file. The below example is for TOML, you can also utilize a YAML or JSON file.
@@ -27,17 +31,7 @@ Fix = "Fix (old)"
 New = "New (old)"
 ```
 
-### Install
-
-You will also need to install this package. At the time, i haven't published this to PyPi, so you will need to use git. Below is an example with poetry:
-
-```toml
-[tool.poetry.dev-dependencies.cz_legacy]
-git = "https://github.com/kyleking/cz_legacy.git"
-branch = "main"
-```
-
-or with pip: `pip install git+https://github.com/KyleKing/cz_legacy.git`
+### Pre-Commit
 
 To use in pre-commit, add this to your `pre-commit-config.yml`
 
@@ -47,16 +41,14 @@ repos:
     rev: v2.11.1
     hooks:
       - id: commitizen
-        additional_dependencies: ["git+https://github.com/KyleKing/cz_legacy.git"]
+        additional_dependencies: ["cz_legacy"]
         stages: [commit-msg]
 ```
 
-> Note: I plan to publish this to PyPi, but it is not yet published at the time of writing
+## Issues
+
+If you have any feature requests, run into any bugs, or have questions, feel free to start a discussion or open an issue on Github at [https://github.com/kyleking/calcipy](https://github.com/kyleking/calcipy).
 
 ## Background
 
-I couldn't find a good way of just adding a few legacy change types from an old commit style to commitizen, but [you can extend the classes to provide custom logic](https://commitizen-tools.github.io/commitizen/customization/#2-customize-through-customizing-a-class). The `LegacyCz` class inherits from [`ConventionalCommitsCz`](https://github.com/commitizen-tools/commitizen/blob/master/commitizen/cz/conventional_commits/conventional_commits.py) so that you can use the Conventional Commit style moving forward. For reference, these are the [default settings](https://github.com/commitizen-tools/commitizen/blob/master/commitizen/defaults.py)
-
-## Planned Changes
-
-- FIXM: publish to PyPi and submit to commitizen 3rd part
+I couldn't find a good way of adding a few legacy change types from an old commit style to commitizen, but [you can extend the classes to provide custom logic](https://commitizen-tools.github.io/commitizen/customization/#2-customize-through-customizing-a-class). The `LegacyCz` class inherits from [`ConventionalCommitsCz`](https://github.com/commitizen-tools/commitizen/blob/master/commitizen/cz/conventional_commits/conventional_commits.py) so that you changes to Conventional Commit will be inherited. For reference, these are the [default settings](https://github.com/commitizen-tools/commitizen/blob/master/commitizen/defaults.py)
