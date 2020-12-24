@@ -2,11 +2,11 @@
 
 Custom Commitizen parser for user-specified legacy change types. The parser utilizes the `cz_conventional_commits` pattern and extends with the tag mapping specified in the configuration file
 
-While old change types will appear in the Changelog, the user will be prevented from using them in new commits. This is the reverse of the [`revert`/`chore` logic](https://github.com/commitizen-tools/commitizen#why-are-revert-and-chore-valid-types-in-the-check-pattern-of-cz-conventional_commits-but-not-types-we-can-select) from commitizen that allows use of those commit types, but won't display them in the changelog
+While old change types will appear in the Changelog, the user will be prevented from using them in new commits. This is the reverse of the [revert/chore logic](https://github.com/commitizen-tools/commitizen#why-are-revert-and-chore-valid-types-in-the-check-pattern-of-cz-conventional_commits-but-not-types-we-can-select) from commitizen that allows use of those commit types, but won't display them in the changelog
 
 ## Alternatives
 
-This customization only works when old commits use the `<change_type>: <message>` format that can be parsed by commitizen. If that doesn't fit your use case, you may want to try out [incremental](https://commitizen-tools.github.io/commitizen/changelog/#incremental) which doesn't modify existing portions of a `CHANGELOG`
+This customization only works when old commits use the `<change_type>: <message>` format that can be parsed by commitizen. If that doesn't fit your use case, you may want to try out [incremental](https://commitizen-tools.github.io/commitizen/changelog/#incremental) which (I think) doesn't prepends to an existing `CHANGELOG`
 
 ## Usage
 
@@ -45,10 +45,14 @@ repos:
         stages: [commit-msg]
 ```
 
+### Developer Information
+
+See [./CONTRIBUTING.md](./CONTRIBUTING.md)
+
 ## Issues
 
-If you have any feature requests, run into any bugs, or have questions, feel free to start a discussion or open an issue on Github at [https://github.com/kyleking/calcipy](https://github.com/kyleking/calcipy).
+If you have any feature requests, run into any bugs, or have questions, feel free to start a discussion or open an issue on Github at [https://github.com/kyleking/cz_legacy](https://github.com/kyleking/cz_legacy).
 
 ## Background
 
-I couldn't find a good way of adding a few legacy change types from an old commit style to commitizen so I built a package to [extend the `ConventionalCommitsCz`](https://github.com/commitizen-tools/commitizen/blob/master/commitizen/cz/conventional_commits/conventional_commits.py) to [provide custom logic](https://commitizen-tools.github.io/commitizen/customization/#2-customize-through-customizing-a-class). For reference, these are the [default settings](https://github.com/commitizen-tools/commitizen/blob/master/commitizen/defaults.py)
+I couldn't find a good way of adding a few legacy change types from an old commit style to commitizen so I built a package to [extend the ConventionalCommitsCz](https://github.com/commitizen-tools/commitizen/blob/master/commitizen/cz/conventional_commits/conventional_commits.py) to [provide custom logic](https://commitizen-tools.github.io/commitizen/customization/#2-customize-through-customizing-a-class). For reference, these are the [default settings](https://github.com/commitizen-tools/commitizen/blob/master/commitizen/defaults.py)

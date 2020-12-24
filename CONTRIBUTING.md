@@ -40,9 +40,11 @@ poetry publish
 Other useful poetry snippets
 
 ```sh
-# Choose Pre-Release Type ({alpha,beta,rc})
-poetry run cz bump --prerelease rc --changelog --dry-run
-# git push --tags?
+# Specify a Pre-Release ({alpha,beta,rc})
+poetry run cz bump --prerelease rc --changelog
+poetry run cz bump --changelog --dry-run
+poetry run cz bump --changelog
+git push --tags
 
 # Combine build and publish
 poetry publish --build
