@@ -20,7 +20,6 @@ repos:
       - id: mixed-line-ending
         args: ["--fix=lf"]
       - id: trailing-whitespace
-        stages: [push]
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v2.11.1
     hooks:
@@ -30,9 +29,7 @@ repos:
     rev: v2.7.4
     hooks:
       - id: pyupgrade
-        stages: [push]
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v2.0.1
     hooks:
       - id: add-trailing-comma
-        stages: [push]
