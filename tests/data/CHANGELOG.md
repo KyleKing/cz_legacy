@@ -1,20 +1,20 @@
 
 ## v1.2.0 (2019-04-19)
 
-### feat
+### Feat
 
 - custom cz plugins now support bumping version
 
 ## v1.1.1 (2019-04-18)
 
-### refactor
+### Refactor
 
 - changed stdout statements
 - **schema**: command logic removed from commitizen base
 - **info**: command logic removed from commitizen base
 - removed delegator, added decli and many tests
 
-### fix
+### Fix
 
 - **bump**: commit message now fits better with semver
 - conventional commit "breaking change" in body instead of title
@@ -27,12 +27,12 @@
 
 - API is stable
 
-### feat
+### Feat
 
 - py3 only, tests and conventional commits 1.0
 
 ## v0.9.1 (2017-11-11)
 
-### fix
+### Fix
 
 - **setup.py**: future is now required for every python version

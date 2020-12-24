@@ -1,7 +1,7 @@
 """Test the cz_legacy module."""
 
 import pytest
-from commitizen import changelog
+from commitizen import changelog, git
 from commitizen.config import BaseConfig
 
 from cz_legacy import discover_this
@@ -39,13 +39,50 @@ def test_generate_tree_from_commits(config, gitcommits, tags):
     assert tuple(tree) == CHANGELOG_TREE
 
 
-def test_render_changelog(config, gitcommits, tags):  # , changelog_content):
-    """Test generating the changelog content."""
+def test_render_changelog(config, gitcommits, tags):
+    """Test generating the changelog content with the user-specified mapping."""
     cz = discover_this(config)
     parser = cz.commit_parser
     changelog_pattern = cz.bump_pattern
-    tree = changelog.generate_tree_from_commits(gitcommits, tags, parser, changelog_pattern)
+    tree = changelog.generate_tree_from_commits(
+        commits=gitcommits,
+        tags=tags,
+        commit_parser=parser,
+        changelog_pattern=changelog_pattern,
+        change_type_map=cz.change_type_map,
+    )
 
     result = changelog.render_changelog(tree)
 
     assert result == PATH_TEST_CHANGELOG.read_text()
+
+
+def test_render_changelog_unsupported_type(config):
+    """Test that unsupported types are excluded from the changelog content."""
+    cz = discover_this(config)
+    parser = cz.commit_parser
+    changelog_pattern = cz.bump_pattern
+    gitcommits = [
+        git.GitCommit(rev='003', title='feat: started commitizen', body=''),
+        git.GitCommit(rev='002', title='Chg: some legacy commit with changes', body=''),
+        git.GitCommit(rev='001', title='NotLegacy: unsupported change type', body=''),
+    ]
+    tree = changelog.generate_tree_from_commits(
+        commits=gitcommits,
+        tags=[],
+        commit_parser=parser,
+        changelog_pattern=changelog_pattern,
+        change_type_map=cz.change_type_map,
+    )
+    expected = '\n'.join([
+        '\n## Unreleased',
+        '\n### Feat',
+        '\n- started commitizen',
+        '\n### Change (Old)',
+        '\n- some legacy commit with changes',
+        '',
+    ])
+
+    result = changelog.render_changelog(tree)
+
+    assert result == expected
