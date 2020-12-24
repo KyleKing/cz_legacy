@@ -42,6 +42,7 @@ Other useful poetry snippets
 ```sh
 # Choose Pre-Release Type ({alpha,beta,rc})
 poetry run cz bump --prerelease rc --changelog --dry-run
+# git push --tags?
 
 # Combine build and publish
 poetry publish --build
