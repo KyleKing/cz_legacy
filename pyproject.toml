@@ -1,0 +1,42 @@
+[build-system]
+requires = [ "poetry-core>=1.0",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.commitizen]
+name = "cz_legacy"
+version = "0.0.1"
+tag_format = "$version"
+version_files = [ "pyproject.toml", "cz_legacy/__init__.py",]
+
+[tool.isort]
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+force_grid_wrap = 0
+length_sort = false
+line_length = 120
+
+[tool.poetry]
+name = "cz_legacy"
+version = "0.0.1"
+description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
+license = "MIT"
+authors = [ "Kyle King <https://github.com/KyleKing>",]
+maintainers = []
+readme = "README.md"
+repository = "https://github.com/kyleking/cz_legacy"
+documentation = "https://github.com/kyleking/cz_legacy"
+keywords = ["commitizen", "conventional", "commits", "git"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/kyleking/cz_legacy/issues"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+commitizen = "*"

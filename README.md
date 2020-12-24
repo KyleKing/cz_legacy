@@ -59,4 +59,4 @@ I couldn't find a good way of just adding a few legacy change types from an old 
 
 ## Planned Changes
 
-- TODO: publish to PyPi
+- FIXM: publish to PyPi and submit to commitizen 3rd part

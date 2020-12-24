@@ -16,7 +16,7 @@ New = "New (old)"
 """Example custom TOML file configuration. Note: should be kept consistent with the README."""
 
 
-class LegacyCz(ConventionalCommitsCz):
+class _LegacyCz(ConventionalCommitsCz):
 
     def __init__(self, *args, **kwargs):
         """Initialize the class and override the data members."""
@@ -34,7 +34,3 @@ class LegacyCz(ConventionalCommitsCz):
         extended_pattern = defaults.bump_pattern.replace('refactor', f'refactor|{joined_types}')
         self.bump_pattern = extended_pattern
         self.changelog_pattern = extended_pattern
-
-
-discover_this = LegacyCz
-"""Make the class discoverable by commitizen."""
