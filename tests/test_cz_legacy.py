@@ -3,6 +3,7 @@
 import pytest
 from commitizen import changelog, git
 from commitizen.config import BaseConfig
+from commitizen.exceptions import CustomError
 
 from cz_legacy import discover_this
 
@@ -15,7 +16,7 @@ def test_missing_legacy_map():
     _config = BaseConfig()
     match = r'User must specify a `cz_legacy_map` dict in `\[tool.commitizen\]`. Example:\n\[tool.commitizen\]\n'
 
-    with pytest.raises(RuntimeError, match=match):
+    with pytest.raises(CustomError, match=match):
         discover_this(_config)
 
 

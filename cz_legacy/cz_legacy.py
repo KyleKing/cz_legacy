@@ -1,7 +1,9 @@
 """Support legacy commit tags specified in toml file."""
 
 from commitizen import defaults
+from commitizen.config.base_config import BaseConfig
 from commitizen.cz.conventional_commits.conventional_commits import ConventionalCommitsCz
+from commitizen.exceptions import CustomError
 
 EXAMPLE = """[tool.commitizen]
 name = "cz_legacy"
@@ -17,14 +19,22 @@ New = "New (old)"
 
 class _LegacyCz(ConventionalCommitsCz):
 
-    def __init__(self, *args, **kwargs):
-        """Initialize the class and override the data members."""
-        super().__init__(*args, **kwargs)
+    def __init__(self, config: BaseConfig) -> None:
+        """Initialize the class and override the data members.
+
+        Args:
+            config: commitizen BaseConfig that stores the parsed settings. Passed to base class
+
+        Raises:
+            CustomError: commitizen-specific error and exit code to indicate that a configuration item is missing
+
+        """
+        super().__init__(config)
 
         # Read the user-specified legacy change types (ct)
-        cz_legacy_map = self.config.settings.get("cz_legacy_map")
+        cz_legacy_map = self.config.settings.get('cz_legacy_map')
         if not cz_legacy_map:
-            raise RuntimeError(f"User must specify a `cz_legacy_map` dict in `[tool.commitizen]`. Example:\n{EXAMPLE}")
+            raise CustomError(f'User must specify a `cz_legacy_map` dict in `[tool.commitizen]`. Example:\n{EXAMPLE}')
         joined_types = '|'.join([*cz_legacy_map.keys()])
 
         self.commit_parser = defaults.commit_parser.replace('<change_type>', f'<change_type>{joined_types}|')
