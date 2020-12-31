@@ -48,7 +48,7 @@ python-box = "*"
 
 [tool.poetry.dev-dependencies.calcipy]
 # git = "https://github.com/kyleking/calcipy.git"
-# branch = "main"
+# branch = "dev/development"
 path = "../calcipy"
-python = "^3.6"  # FIXME: this doesn't install if set to ">=3.8,<3.9"? But my python version is 3.8.3?
+python = ">=3.7,<4.0.0"
 extras = [ "development", "serializers",]

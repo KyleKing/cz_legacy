@@ -21,7 +21,7 @@ repos:
         args: ["--fix=lf"]
       - id: trailing-whitespace
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.11.1
+    rev: v2.12.1
     hooks:
       - id: commitizen
         stages: [commit-msg]
