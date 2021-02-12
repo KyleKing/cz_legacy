@@ -1,11 +1,6 @@
 [build-system]
-requires = [ "poetry-core>=1.0",]
+requires = [ "poetry-core>=1.0.0",]
 build-backend = "poetry.core.masonry.api"
-
-[tool.commitizen]
-name = "cz_conventional_commits"
-version = "0.1.1"
-version_files = [ "pyproject.toml", "cz_legacy/__init__.py",]
 
 [tool.isort]
 balanced_wrapping = true
@@ -13,6 +8,11 @@ default_section = "THIRDPARTY"
 force_grid_wrap = 0
 length_sort = false
 line_length = 120
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.1"
+version_files = [ "pyproject.toml", "cz_legacy/__init__.py",]
 
 [tool.poetry]
 name = "cz_legacy"
@@ -33,6 +33,7 @@ classifiers = [
     "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: Implementation :: CPython",
 ]
 
@@ -47,8 +48,7 @@ commitizen = "*"
 python-box = "*"
 
 [tool.poetry.dev-dependencies.calcipy]
-# git = "https://github.com/kyleking/calcipy.git"
-# branch = "dev/development"
-path = "../calcipy"
-python = ">=3.7,<4.0.0"
-extras = [ "development", "serializers",]
+git = "https://github.com/kyleking/calcipy.git"
+branch = "main"
+python = ">=3.7.1,<4.0.0"
+extras = [ "dev", "lint", "test",]
