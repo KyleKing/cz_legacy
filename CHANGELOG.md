@@ -1,3 +1,9 @@
+## 0.1.2 (2021-05-22)
+
+### Fix
+
+- specify minimum commitizen ver
+
 ## 0.1.1 (2020-12-31)
 
 ### Refactor
