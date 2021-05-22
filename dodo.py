@@ -1,4 +1,22 @@
-"""doit Script."""
+"""doit Script.
+
+```sh
+# Ensure that packages are installed
+poetry install
+# List Tasks
+poetry run doit list
+# (Or use a poetry shell)
+# > poetry shell
+# > doit list
+
+# Run tasks individually (examples below)
+poetry doit run coverage open_test_docs
+poetry doit run set_lint_config create_tag_file document
+# Or all of the tasks in DOIT_CONFIG
+poetry run doit
+```
+
+"""
 
 from pathlib import Path
 
