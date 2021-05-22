@@ -42,7 +42,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
-commitizen = "*"
+commitizen = "^2"
 
 [tool.poetry.dev-dependencies]
 python-box = "*"
