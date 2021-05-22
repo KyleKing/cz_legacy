@@ -2,8 +2,10 @@
 
 ## Local Development
 
+This project is built with `calcipy` with some minor modifications
+
 ```sh
-git clone https://github.com/kyleking/cz_legacy.git
+git clone https://github.com/KyleKing/cz_legacy.git
 cd cz_legacy
 poetry install
 
@@ -36,6 +38,16 @@ To publish to the real PyPi
 poetry config pypi-token.pypi ...
 poetry build
 poetry publish
+```
+
+Other useful poetry snippets
+
+```sh
+# Specify a Pre-Release ({alpha,beta,rc})
+poetry run cz bump --prerelease rc --changelog
+poetry run cz bump --changelog --dry-run
+poetry run cz bump --changelog
+git push --tags
 
 # Combine build and publish
 poetry publish --build
@@ -50,3 +62,8 @@ poetry publish --build
 - [ ] Increment version: `poetry run doit run cl_bump`
 - [ ] Check that the README and other Markdown files are up-to-date
 - [ ] Publish (see above)
+
+## Resources
+
+- [Official Docs](https://python-poetry.org/docs/repositories/)
+- [Ian Wootten: Publishing a Package to PyPi With Poetry](https://www.ianwootten.co.uk/2020/10/20/publishing-a-package-to-pypi-with-poetry/)
