@@ -1,20 +1,30 @@
-"""Pytest configuration.
+"""PyTest configuration."""
 
-Based on: https://github.com/commitizen-tools/commitizen/tree/master/tests
-and: https://github.com/marcelomaia/commitizen-emoji/tree/master/tests
-
-"""
-
+from pathlib import Path
 from typing import List, Tuple
 
 import pytest
-from box import Box
-from calcipy.conftest import pytest_configure  # noqa: F401
-from calcipy.conftest import pytest_html_results_table_header  # noqa: F401
-from calcipy.conftest import pytest_html_results_table_row  # noqa: F401
-from calcipy.conftest import pytest_runtest_makereport  # noqa: F401
+from calcipy.dev.conftest import pytest_configure  # noqa: F401
+from calcipy.dev.conftest import pytest_html_results_table_header  # noqa: F401
+from calcipy.dev.conftest import pytest_html_results_table_row  # noqa: F401
+from calcipy.dev.conftest import pytest_runtest_makereport  # noqa: F401
+from calcipy.dot_dict import ddict  # PLANNED: DDICT_TYPE
 from commitizen import defaults, git
 from commitizen.config import BaseConfig
+
+from .configuration import TEST_TMP_CACHE, clear_test_cache
+
+
+@pytest.fixture()
+def fix_test_cache() -> Path:
+    """Fixture to clear and return the test cache directory for use.
+
+    Returns:
+        Path: Path to the test cache directory
+
+    """
+    clear_test_cache()
+    return TEST_TMP_CACHE
 
 
 @pytest.fixture()
@@ -75,7 +85,7 @@ ANSWERS = [
         ),
     ],
 )
-def messages(request: List[Tuple[dict, str]]) -> Box:
+def messages(request: List[Tuple[dict, str]]):  #  -> DDICT_TYPE:
     """Fixture for raw answer and expected formatted commit message.
 
     Args:
@@ -85,7 +95,7 @@ def messages(request: List[Tuple[dict, str]]) -> Box:
         Box: raw commit `answer` and formatted `expected` message
 
     """
-    return Box({'answer': request.param[0], 'expected': request.param[1]})
+    return ddict(answer=request.param[0], expected=request.param[1])
 
 
 COMMITS_DATA = [

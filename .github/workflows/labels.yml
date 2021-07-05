@@ -1,8 +1,11 @@
+---
 # Docs: https://github.com/marketplace/actions/github-labeler
 
 name: github_labeler
 
-on:
+# Run on "push" for first initialization, then only on PR's thereafter
+# on: push
+on:  # yamllint disable-line rule:truthy
   pull_request:
     branches:
       - main

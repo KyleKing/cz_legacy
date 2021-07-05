@@ -1,31 +1,34 @@
 [build-system]
-requires = [ "poetry-core>=1.0.0",]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
 balanced_wrapping = true
 default_section = "THIRDPARTY"
 force_grid_wrap = 0
+include_trailing_comma = true
+known_first_party = "cz_legacy"
 length_sort = false
 line_length = 120
+multi_line_output = 5
 
 [tool.commitizen]
 name = "cz_conventional_commits"
 version = "0.1.2"
-version_files = [ "pyproject.toml", "cz_legacy/__init__.py",]
+version_files = ["pyproject.toml", "cz_legacy/__init__.py", "appveyor.yml"]
 
 [tool.poetry]
 name = "cz_legacy"
 version = "0.1.2"
 description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
 license = "MIT"
-authors = [ "Kyle King <dev.act.kyle@gmail.com>",]
+authors = ["Kyle King <dev.act.kyle@gmail.com>"]
 maintainers = []
 repository = "https://github.com/kyleking/cz_legacy"
-documentation = "https://github.com/kyleking/cz_legacy"
-readme = "README.md"
-include = [ "LICENSE.md",]
-keywords = [ "commitizen", "conventional commits", "git",]
+documentation = "https://github.com/kyleking/cz_legacy/docs"
+readme = "docs/README.md"
+include = ["LICENSE.md"]
+keywords = ["commitizen", "conventional commits", "git"]
 classifiers = [
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
@@ -35,7 +38,7 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: Implementation :: CPython",
-]
+] # https://pypi.org/classifiers/
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/kyleking/cz_legacy/issues"
@@ -45,10 +48,4 @@ python = "^3.6.1"
 commitizen = "^2"
 
 [tool.poetry.dev-dependencies]
-python-box = "*"
-
-[tool.poetry.dev-dependencies.calcipy]
-git = "https://github.com/kyleking/calcipy.git"
-branch = "main"
-python = ">=3.7.1,<4.0.0"
-extras = [ "dev", "lint", "test",]
+calcipy = { version="*", extras=["dev", "lint", "test"], python=">=3.8,<4.0.0" }

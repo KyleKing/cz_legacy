@@ -2,4 +2,4 @@
 
 Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen
 
-Full documentation, here: [./docs](./docs)
+Documentation, can be found on [Github:/docs](./docs) or [PyPi](https://pypi.org/project/cz_legacy/)
