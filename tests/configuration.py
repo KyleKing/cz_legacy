@@ -3,11 +3,6 @@
 from pathlib import Path
 
 from calcipy.file_helpers import delete_dir, ensure_dir
-from calcipy.log_helpers import activate_debug_logging
-
-from cz_legacy import __pkg_name__
-
-activate_debug_logging(pkg_names=[__pkg_name__], clear_log=True)
 
 TEST_DIR = Path(__file__).resolve().parent
 """Path to the `test` directory that contains this file and all other tests."""
@@ -23,6 +18,7 @@ def clear_test_cache() -> None:
     """Remove the test cache directory if present."""
     delete_dir(TEST_TMP_CACHE)
     ensure_dir(TEST_TMP_CACHE)
+
 
 PATH_TEST_CHANGELOG: Path = TEST_DATA_DIR / 'CHANGELOG.md'
 """Path to the test CHANGELOG file."""
