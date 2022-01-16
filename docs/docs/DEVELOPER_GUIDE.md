@@ -50,5 +50,5 @@ poetry run doit run cl_bump document deploy_docs publish
 | `cz_legacy/cz_legacy.py` |           17 |         0 |          0 | 100.0%     |
 | **Totals**               |           22 |         0 |          0 | 100.0%     |
 
-Generated on: 2022-01-16T15:03:53.923116
+Generated on: 2022-01-16T15:54:51.307930
 <!-- {cte} -->
