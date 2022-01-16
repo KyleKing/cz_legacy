@@ -45,7 +45,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
-commitizen = "^2"
+commitizen = ">=2"
 
 [tool.poetry.dev-dependencies]
-calcipy = { version="*", extras=["dev", "lint", "test"], python=">=3.8,<4.0.0" }
+calcipy = { version="^0.8.2", extras=["dev", "lint", "test"], python=">=3.8,<4.0.0" }
