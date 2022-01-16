@@ -2,6 +2,7 @@
 
 ### Refactor
 
+- use "import as" for discover_this
 - rename isort for copier
 
 ### Fix
