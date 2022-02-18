@@ -2,6 +2,13 @@
 
 ### Fix
 
+- add link to changelog for PyPi
+- regular imports do not work with this design
+
+## 0.1.5 (2022-02-18)
+
+### Fix
+
 - update cz_legacy hook
 - cleanup tests and import checks
 
