@@ -9,6 +9,4 @@ FIXME: Replace with programmatic imports? Maybe explicit imports to check backwa
 
 """
 
-from cz_legacy.cz_legacy import _LegacyCz  # noqa: F401
-
-# FYI: Cannot import discover_this directly
+# FYI: Cannot import _LegacyCz or discover_this because would cause a circular import
