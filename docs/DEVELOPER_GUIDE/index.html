@@ -757,9 +757,9 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>poetry config pypi-token.pypi ...
 <span class="linenos" data-linenos=" 2 "></span>poetry run doit run publish
 <span class="linenos" data-linenos=" 3 "></span>
-<span class="linenos" data-linenos=" 4 "></span><span class="c1"># For a full release, triple check the default tasks, increment the version, rebuild documentation, and publish!</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="c1"># For a full release, triple check the default tasks, increment the version, rebuild documentation (twice), and publish!</span>
 <span class="linenos" data-linenos=" 5 "></span>poetry run doit run --continue
-<span class="linenos" data-linenos=" 6 "></span>poetry run doit run cl_bump lock document deploy_docs publish
+<span class="linenos" data-linenos=" 6 "></span>poetry run doit run cl_bump lock document deploy_docs publish cl_write document deploy_docs
 <span class="linenos" data-linenos=" 7 "></span>
 <span class="linenos" data-linenos=" 8 "></span><span class="c1"># For pre-releases use cl_bump_pre</span>
 <span class="linenos" data-linenos=" 9 "></span>poetry run doit run cl_bump_pre -p rc
