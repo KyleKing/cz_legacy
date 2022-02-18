@@ -2,6 +2,7 @@
 
 ### Fix
 
+- update cz_legacy hook
 - cleanup tests and import checks
 
 ## 0.1.3 (2022-01-16)
