@@ -9,8 +9,6 @@ FIXME: Replace with programmatic imports? Maybe explicit imports to check backwa
 
 """
 
-from pprint import pprint
+from cz_legacy.cz_legacy import _LegacyCz  # noqa: F401
 
-# TODO: Replace with imports to test
-
-pprint(locals())  # noqa: T003
+# FYI: Cannot import discover_this directly
