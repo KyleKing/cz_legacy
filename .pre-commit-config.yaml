@@ -40,10 +40,7 @@ repos:
     rev: v2.21.0
     hooks:
       - id: commitizen
-        # yamllint disable-line rule:line-length
-        additional_dependencies: [
-          "git+https://github.com/KyleKing/cz_legacy.git@d2e273003ac302f6583f0c5d4c0f2a29aaeee73b"
-        ]
+        additional_dependencies: [cz_legacy]
         stages: [commit-msg]
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.2.0
