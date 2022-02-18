@@ -90,8 +90,6 @@ on_failure:
 on_finish:
   - echo "Build Finish"
 
-on_finish:
-  - cmd: ECHO "Build Finish"
 artifacts:
   - path: releases/site.zip
   - path: releases/tests.zip

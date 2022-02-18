@@ -1,5 +1,7 @@
 ## Unreleased
 
+## 0.1.3 (2022-01-16)
+
 ### Refactor
 
 - use "import as" for discover_this
