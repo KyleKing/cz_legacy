@@ -45,11 +45,12 @@ classifiers = [
 "Changelog" = "https://github.com/kyleking/cz_legacy/blob/main/docs/docs/CHANGELOG.md"
 
 [tool.poetry.dependencies]
-python = "^3.6.1"
-commitizen = ">=2"
+python = "^3.6.2"
+commitizen = ">=2.0.0"
 
 [tool.poetry.dev-dependencies]
-calcipy = { version = ">=0.11.0", extras = [
+# FYI: pycln and dataclasses do not support Python 3.6
+calcipy = { version = ">=0.14.0", extras = [
     "dev",
     "lint",
     "test",
