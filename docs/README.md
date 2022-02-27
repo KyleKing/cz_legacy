@@ -41,7 +41,7 @@ repos:
     rev: v2.11.1
     hooks:
       - id: commitizen
-        additional_dependencies: ["cz_legacy"]
+        additional_dependencies: [cz_legacy]
         stages: [commit-msg]
 ```
 

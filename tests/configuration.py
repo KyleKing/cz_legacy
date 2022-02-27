@@ -20,5 +20,5 @@ def clear_test_cache() -> None:
     ensure_dir(TEST_TMP_CACHE)
 
 
-PATH_TEST_CHANGELOG: Path = TEST_DATA_DIR / 'CHANGELOG_TEST.md'
+PATH_TEST_CHANGELOG: Path = TEST_DATA_DIR / 'CHANGELOG.md'
 """Path to the test CHANGELOG file."""

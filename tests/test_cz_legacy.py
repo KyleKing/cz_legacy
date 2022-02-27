@@ -8,7 +8,7 @@ from commitizen.exceptions import CustomError
 from cz_legacy import discover_this
 
 from .configuration import PATH_TEST_CHANGELOG
-from .conftest import CHANGELOG_TREE
+from .constants import CHANGELOG_TREE
 
 
 def test_missing_legacy_map():
