@@ -48,10 +48,10 @@ poetry run doit run lock document deploy_docs publish
 
 <!-- {cts} COVERAGE -->
 | File                     |   Statements |   Missing |   Excluded | Coverage   |
-|:-------------------------|-------------:|----------:|-----------:|:-----------|
+|--------------------------|--------------|-----------|------------|------------|
 | `cz_legacy/__init__.py`  |            5 |         0 |          0 | 100.0%     |
 | `cz_legacy/cz_legacy.py` |           17 |         0 |          0 | 100.0%     |
 | **Totals**               |           22 |         0 |          0 | 100.0%     |
 
-Generated on: 2022-02-27T11:31:02.467619
+Generated on: 2022-05-01T14:08:54.373288
 <!-- {cte} -->
