@@ -1,5 +1,5 @@
 [build-system]
-requires = ["poetry-core>=1.0.7"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
@@ -15,7 +15,7 @@ multi_line_output = 5
 [tool.commitizen]
 name = "cz_conventional_commits"
 version = "0.1.6"
-version_files = ["pyproject.toml", "cz_legacy/__init__.py", "appveyor.yml"]
+version_files = ["pyproject.toml", "cz_legacy/__init__.py"]
 
 [tool.poetry]
 name = "cz_legacy"
@@ -30,6 +30,7 @@ readme = "docs/README.md"
 include = ["LICENSE.md"]
 keywords = ["commitizen", "conventional commits", "git"]
 classifiers = [
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
     "License :: OSI Approved :: MIT License",
