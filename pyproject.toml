@@ -37,6 +37,7 @@ classifiers = [
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: Implementation :: CPython",
 ] # https://pypi.org/classifiers/
 
@@ -45,13 +46,15 @@ classifiers = [
 "Changelog" = "https://github.com/kyleking/cz_legacy/blob/main/docs/docs/CHANGELOG.md"
 
 [tool.poetry.dependencies]
+# Keep in sync with commitizen
+# https://github.com/commitizen-tools/commitizen/blob/6ef0017b687fa5550ffc51b79c5de9f33dcef508/pyproject.toml#L59
 python = "^3.6.2"
 commitizen = ">=2.0.0"
 
 [tool.poetry.dev-dependencies]
 # FYI: pycln and dataclasses do not support Python 3.6
-calcipy = { version = ">=0.14.0", extras = [
+calcipy = { version = ">=0.16.0", extras = [
     "dev",
     "lint",
     "test",
-], python = ">=3.8,<4.0.0" }
+], python = "^3.8.4" }
