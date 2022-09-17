@@ -2,6 +2,7 @@
 
 ### Fix
 
+- update the version files list
 - **#3**: ensure tests are only run when calcipy is available
 
 ## 0.1.6 (2022-02-18)

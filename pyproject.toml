@@ -14,12 +14,12 @@ multi_line_output = 5
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.1.6"
+version = "0.1.7"
 version_files = ["pyproject.toml", "cz_legacy/__init__.py"]
 
 [tool.poetry]
 name = "cz_legacy"
-version = "0.1.6"
+version = "0.1.7"
 description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
 license = "MIT"
 authors = ["Kyle King <dev.act.kyle@gmail.com>"]
