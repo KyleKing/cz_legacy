@@ -2,6 +2,7 @@
 site_name: cz_legacy
 site_author: Kyle King
 site_description: cz_legacy project documentation
+site_url: https://cz_legacy.kyleking.me
 repo_name: kyleking/cz_legacy
 repo_url: https://github.com/kyleking/cz_legacy
 edit_uri: edit/main/docs
@@ -16,11 +17,18 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
-    - navigation.instant
-    - navigation.tabs
     - toc.autohide
 
 plugins:
+  - build_plantuml:
+      render: server  # or "local"
+      bin_path: /usr/local/bin/plantuml  # ignored when render: server
+      server: http://www.plantuml.com/plantuml  # official plantuml server
+      output_format: svg
+      diagram_root: docs/diagrams
+      output_folder: out
+      input_folder: src
+      input_extensions: puml
   - search
   - gen-files:
       scripts:
@@ -30,6 +38,8 @@ plugins:
       fallback_to_build_date: true
       enable_creation_date: true
   - mkdocstrings:
+      watch:
+        - cz_legacy
       handlers:
         python:
           rendering:
@@ -39,7 +49,7 @@ plugins:
             show_category_heading: true
   - literate-nav:
       nav_file: SUMMARY.md
-  - section-index:
+  - section-index
 
 markdown_extensions:
   - abbr
@@ -71,7 +81,7 @@ markdown_extensions:
       toc_depth: 5
 
 extra_css:
-  - css/mkdocstrings.css
+  - _styles/mkdocstrings.css
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js

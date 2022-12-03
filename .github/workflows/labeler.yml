@@ -1,6 +1,5 @@
 ---
 # Docs: https://github.com/marketplace/actions/github-labeler
-
 name: github_labeler
 
 # Will only be run each push or PR merge to the main branch
@@ -10,7 +9,7 @@ on:  # yamllint disable-line rule:truthy
       - main
     paths:
       - .github/labels.yml
-      - .github/workflows/labels.yml
+      - .github/workflows/labeler.yml
 
 jobs:
   labeler:
