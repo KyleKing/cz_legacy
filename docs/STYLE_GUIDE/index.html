@@ -12,8 +12,10 @@
         <meta name="author" content="Kyle King">
       
       
+        <link rel="canonical" href="https://cz_legacy.kyleking.me/docs/STYLE_GUIDE/">
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.1">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.4">
     
     
       
@@ -21,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2e8b5541.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.80dcb947.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -40,6 +42,10 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../_styles/mkdocstrings.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -176,84 +182,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
-      cz_legacy
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../adr/" class="md-tabs__link">
-        Adr
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-    
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../CHANGELOG/" class="md-tabs__link md-tabs__link--active">
-        Docs
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../modules/cz_legacy/" class="md-tabs__link">
-        Modules
-      </a>
-    </li>
-  
-
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -266,10 +194,8 @@
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="cz_legacy" class="md-nav__button md-logo" aria-label="cz_legacy" data-md-component="logo">
       
@@ -315,68 +241,6 @@
 
   
   
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Adr
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Adr" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Adr
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../adr/" class="md-nav__link">
-        ADR Documentation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../adr/NNN-Template/" class="md-nav__link">
-        \[short title of solved problem and solution\]
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -384,18 +248,24 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_3">
-          Docs
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../Advanced_Documentation/">Docs</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Docs" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Docs
         </label>
@@ -409,20 +279,6 @@
     <li class="md-nav__item">
       <a href="../CHANGELOG/" class="md-nav__link">
         CHANGELOG
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../CODE_OF_CONDUCT/" class="md-nav__link">
-        Contributor Covenant Code of Conduct
       </a>
     </li>
   
@@ -449,36 +305,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../CONTRIBUTING/" class="md-nav__link">
-        Contributing
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../DEVELOPER_GUIDE/" class="md-nav__link">
         Developer Notes
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../SECURITY/" class="md-nav__link">
-        Security
       </a>
     </li>
   
@@ -533,13 +361,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conventional-commits" class="md-nav__link">
-    Conventional Commits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#commitizen-types-and-scopes" class="md-nav__link">
     Commitizen Types and Scopes
   </a>
@@ -547,8 +368,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#git-message-guidelines" class="md-nav__link">
-    Git Message Guidelines
+  <a href="#git-description-guidelines" class="md-nav__link">
+    Git Description Guidelines
   </a>
   
 </li>
@@ -612,18 +433,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_3">
           Modules
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Modules" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Modules
         </label>
@@ -638,36 +459,28 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_4_1">
-          Cz legacy
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../modules/cz_legacy/">Cz legacy</a>
+          
+            <label for="__nav_3_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Cz legacy" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_1">
+        <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           Cz legacy
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../modules/cz_legacy/" class="md-nav__link">
-        cz_legacy
-      </a>
-    </li>
-  
-
-            
           
             
               
@@ -691,6 +504,93 @@
     <li class="md-nav__item">
       <a href="../../modules/cz_legacy/cz_legacy/" class="md-nav__link">
         cz_legacy.cz_legacy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../reference/cz_legacy/">cz_legacy</a>
+          
+            <label for="__nav_4_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="cz_legacy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          cz_legacy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cz_legacy/cz_legacy/" class="md-nav__link">
+        cz_legacy
       </a>
     </li>
   
@@ -745,13 +645,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conventional-commits" class="md-nav__link">
-    Conventional Commits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#commitizen-types-and-scopes" class="md-nav__link">
     Commitizen Types and Scopes
   </a>
@@ -759,8 +652,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#git-message-guidelines" class="md-nav__link">
-    Git Message Guidelines
+  <a href="#git-description-guidelines" class="md-nav__link">
+    Git Description Guidelines
   </a>
   
 </li>
@@ -820,39 +713,45 @@
 
 <h1 id="personal-style-guides">Personal Style Guides<a class="headerlink" href="#personal-style-guides" title="Permanent link">⚓︎</a></h1>
 <h2 id="git">Git<a class="headerlink" href="#git" title="Permanent link">⚓︎</a></h2>
-<p>Use <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> and <a href="https://github.com/commitizen-tools/commitizen">Commitizen</a></p>
-<p>The <a href="https://keepachangelog.com/en/1.0.0/">Changelog</a> is an important part of a project (built with <code>commitizen</code>). Use <a href="https://semver.org/">semver</a></p>
-<h3 id="conventional-commits">Conventional Commits<a class="headerlink" href="#conventional-commits" title="Permanent link">⚓︎</a></h3>
+<p>We use <a href="https://github.com/commitizen-tools/commitizen">Commitizen</a> to manage both an auto-generated <a href="https://keepachangelog.com/en/1.0.0/">Changelog</a> and incrementing the release version following <a href="https://semver.org/">semver</a>. For both of these automated outputs to work well, please follow the <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> style, which is described in more detail below.</p>
+<h3 id="commitizen-types-and-scopes">Commitizen Types and Scopes<a class="headerlink" href="#commitizen-types-and-scopes" title="Permanent link">⚓︎</a></h3>
+<blockquote>
+<p><code>type(scope): description</code></p>
+</blockquote>
 <ul>
-<li><code>type(scope): description / body</code></li>
-<li>The type feat MUST be used when a commit adds a new feature to your application or library.</li>
-<li>The type fix MUST be used when a commit represents a bug fix for your application.</li>
-<li>A scope MUST consist of a noun describing a section of the codebase surrounded by parenthesis, e.g., <code>fix(parser):</code> or issue number <code>fix(#32):</code></li>
-<li>A <code>!</code> can be used to indicate a breaking change, e.g. <code>refactor!: drop support for Node 6</code></li>
-<li>What if a commit fits multiple types?</li>
-<li>Go back and make multiple commits whenever possible. Part of the benefit of Conventional Commits is its ability to drive us to make more organized commits and PRs.</li>
-<li>It discourages moving fast in a disorganized way. It helps you be able to move fast long term across multiple projects with varied contributors.</li>
-<li><code>semver</code>: <code>fix : PATCH / feat : MINOR / BREAKING CHANGE : MAJOR</code></li>
+<li><strong>Types</strong><ul>
+<li><em>fix</em>: A bug fix</li>
+<li><em>feat</em>: A new feature</li>
+<li><em>docs</em>: Documentation-only changes (code comments, separate docs)</li>
+<li><em>style</em>: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons)</li>
+<li><em>perf</em>: A code change that improves performance</li>
+<li><em>refactor</em>: A change to production code that is not a <em>fix</em>, <em>feat</em>, or <em>perf</em></li>
+<li><em>test</em>: Adding missing or correcting existing tests</li>
+<li><em>build</em>: Changes that affect the build system or external dependencies</li>
+<li><em>ci</em>: Changes to our CI configuration files and scripts</li>
+<li>A <code>!</code> can be used to indicate a breaking change (<code>refactor!: drop support for Node 6</code>)</li>
+<li><strong>SemVer Rules</strong><ul>
+<li>Based on commit type, the version will be auto-incremented: <code>fix : PATCH // feat : MINOR // BREAKING CHANGE : MAJOR</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Scopes</strong><ul>
+<li>A Class, File name, Issue Number, other appropriate noun. As examples: <code>build(poetry): bump requests to v3</code> or <code>style(#32): add missing type annotations</code></li>
+</ul>
+</li>
+<li><strong>Tips</strong><ul>
+<li>What if a commit fits multiple types?<ul>
+<li>Go back and make multiple commits whenever possible. Part of the benefit of Conventional Commits is the focus on more organized and intentional changes</li>
+</ul>
+</li>
 <li>Use <code>git rebase -i</code> to fix commit names prior to merging if incorrect types/scopes are used</li>
 </ul>
-<h3 id="commitizen-types-and-scopes">Commitizen Types and Scopes<a class="headerlink" href="#commitizen-types-and-scopes" title="Permanent link">⚓︎</a></h3>
-<ul>
-<li>Types</li>
-<li>fix: A bug fix</li>
-<li>feat: A new feature</li>
-<li>docs: Documentation-only changes (code comments, separate docs)</li>
-<li>style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons)</li>
-<li>perf: A code change that improves performance</li>
-<li>refactor: A change to production code that is not fix, feat, or perf</li>
-<li>test: Adding missing or correcting existing tests</li>
-<li>build: Changes that affect the build system or external dependencies (example scopes: pip, docker, npm)</li>
-<li>ci: Changes to our CI configuration files and scripts (example scopes: GitLabCI)</li>
-<li>Scopes</li>
-<li>Class, File name, Issue Number, other approved noun</li>
+</li>
 </ul>
-<h3 id="git-message-guidelines">Git Message Guidelines<a class="headerlink" href="#git-message-guidelines" title="Permanent link">⚓︎</a></h3>
+<h3 id="git-description-guidelines">Git Description Guidelines<a class="headerlink" href="#git-description-guidelines" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li><a href="https://writingfordevelopers.substack.com/p/how-to-write-a-commit-message">Commit message guidelines</a></li>
+<li><a href="https://writingfordevelopers.substack.com/p/how-to-write-a-commit-message">Commit message guidelines</a><ul>
 <li>Full sentence with verb (<em>lowercase</em>) and concise description. Below are modified examples for Conventional Commits<ul>
 <li><code>fix(roles): bug in admin role permissions</code></li>
 <li><code>feat(ui): implement new button design</code></li>
@@ -862,10 +761,12 @@
 <li><code>feat(api): endpoints to implement new customer dashboard</code></li>
 </ul>
 </li>
-<li><a href="https://chris.beams.io/posts/git-commit/">How to write a good commit message</a></li>
+</ul>
+</li>
+<li><a href="https://chris.beams.io/posts/git-commit/">How to write a good commit message</a><ul>
 <li>A diff will tell you what changed, but only the commit message can properly tell you why.</li>
 <li>Keep in mind: <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">This</a> <a href="https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines">has</a> <a href="https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing">all</a> <a href="http://who-t.blogspot.co.at/2009/12/on-commit-messages.html">been</a> <a href="https://github.com/erlang/otp/wiki/writing-good-commit-messages">said</a> <a href="https://github.com/spring-projects/spring-framework/blob/30bce7/CONTRIBUTING.md#format-commit-messages">before</a>.</li>
-<li>The seven rules of a great Git commit message<ul>
+<li>From the seven rules of a great Git commit message:<ul>
 <li>
 <ol>
 <li><a href="https://chris.beams.io/posts/git-commit/#limit-50">Try for 50 characters, but consider 72 the hard limit</a></li>
@@ -879,86 +780,83 @@
 </ul>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="issue-labels-and-milestones">Issue Labels and Milestones<a class="headerlink" href="#issue-labels-and-milestones" title="Permanent link">⚓︎</a></h3>
 <p>Personal Guide</p>
 <ul>
-<li>Labels</li>
-<li><code>Needs Discussion</code>: (<code>#ff5722</code>) Ticket needs discussion and prioritization</li>
-<li><code>Type: Bug</code>: (<code>#d73a4a</code>) Something isn&rsquo;t working</li>
-<li><code>Type: Documentation</code>: (<code>#69cde9</code>) Documentation changes</li>
-<li><code>Type: Maintenance</code>: (<code>#c5def5</code>) Chore including build/dep, CI, refactor, or perf</li>
-<li><code>Type: Idea</code>: (<code>#fbca04</code>) General idea or concept that could become a feature request</li>
-<li><code>Type: Feature</code>: (<code>#0075ca</code>) Clearly defined new feature request</li>
-<li>Milestones</li>
-<li>Current Tasks (Main Milestone) - name could change based on a specific project, sprint, or month</li>
-<li>Next Tasks</li>
-<li>Blue Sky</li>
-<li>Search</li>
-<li><code>is:open is:issue assignee:{{ author_username }} archived:false milestone:"blue sky"</code> or <code>no:milestone</code> etc.</li>
+<li>For Issue Labels, see <a href="https://github.com/kyleking/.github/labels.yml">labels.yml</a></li>
+<li>Milestones<ul>
+<li><strong>Current Tasks</strong>: main milestone (<em>name could change based on a specific project, sprint, or month</em>)</li>
+<li><strong>Next Tasks</strong></li>
+<li><strong>Blue Sky</strong></li>
+</ul>
+</li>
 </ul>
 <details>
 <summary>Research</summary>
 <ul>
 <li>[Sane Github Labels](https://medium.com/@dave_lunny/sane-github-labels-c5d2e6004b63) and see [sensible-github-labels](https://github.com/Relequestual/sensible-github-labels) for full descriptions of each</li>
     <ul>
-    <li>“it is much more helpful to see the status and type of all issues at a glance.”</li>
-    <li>One of each:</li>
+        <li>“it is much more helpful to see the status and type of all issues at a glance.”</li>
+        <li>One of each:</li>
         <ul>
+            <li>Status: …</li>
+                <ul><li>Abandoned, Accepted, Available, Blocked, Completed, In Progress, On Hold, Pending, Review Needed, Revision Needed</li></ul>
+            <li>Type: …</li>
+                <ul><li>Bug, Maintenance, Question, Enhancement</li></ul>
+            <li>Priority: …</li>
+                <ul><li>Critical, High, Medium, Low</li></ul>
+        </ul>
+    </ul>
+    <li>[Britecharts](https://britecharts.github.io/britecharts/github-labels.html)</li>
+    <ul>
         <li>Status: …</li>
-            <ul><li>Abandoned, Accepted, Available, Blocked, Completed, In Progress, On Hold, Pending, Review Needed, Revision Needed</li></ul>
-        <li>Type: …</li>
-            <ul><li>Bug, Maintenance, Question, Enhancement</li></ul>
-        <li>Priority: …</li>
-            <ul><li>Critical, High, Medium, Low</li></ul>
-        </ul>
-    </ul>
-<li>[Britecharts](https://britecharts.github.io/britecharts/github-labels.html)</li>
-    <ul>
-    <li>Status: …</li>
-        <ul>
-        <li>On Review – Request that we are pondering if including or not</li>
-        <li>Needs Reproducing – For bugs that need to be reproduced in order to get fixed</li>
-        <li>Needs Design – Feature that needs a design</li>
-        <li>Ready to Go – Issue that has been defined and is ready to get started with</li>
-        <li>In Progress – Issue that is being worked on right now.</li>
-        <li>Completed – Finished feature or fix</li>
-        </ul>
-    <li>Type: …</li>
-        <ul>
-        <li>Bug – An unexpected problem or unintended behavior</li>
-        <li>Feature – A new feature request</li>
-        <li>Maintenance – A regular maintenance chore or task, including refactors, build system, CI, performance improvements</li>
-        <li>Documentation – A documentation improvement task</li>
-        <li>Question – An issue or PR that needs more information or a user question</li>
-        </ul>
-    <li>Not Included</li>
-        <ul>
-        <li>Priority: They would add complexity and overhead due to the discussions, but could help with the roadmap</li>
-        <li>Technology Labels: It can create too much overhead, as properly tag with technologies all the issues could be time consuming</li>
-        </ul>
-    </ul>
-<li>[Ian Bicking Blog](https://www.ianbicking.org/blog/2014/03/use-github-issues-to-organize-a-project.html)</li>
-    <ul>
-    <li>Milestone Overview</li>
-        <ul>
-        <li>What are we doing right now?</li>
-        <li>What aren’t we doing right now?</li>
             <ul>
-            <li>2a. Stuff we’ll probably do soon</li>
-            <li>2b. Stuff we probably won’t do soon</li>
+                <li>On Review – Request that we are pondering if including or not</li>
+                <li>Needs Reproducing – For bugs that need to be reproduced in order to get fixed</li>
+                <li>Needs Design – Feature that needs a design</li>
+                <li>Ready to Go – Issue that has been defined and is ready to get started with</li>
+                <li>In Progress – Issue that is being worked on right now.</li>
+                <li>Completed – Finished feature or fix</li>
             </ul>
-        <li>What aren’t we sure about?</li>
+        <li>Type: …</li>
+            <ul>
+                <li>Bug – An unexpected problem or unintended behavior</li>
+                <li>Feature – A new feature request</li>
+                <li>Maintenance – A regular maintenance chore or task, including refactors, build system, CI, performance improvements</li>
+                <li>Documentation – A documentation improvement task</li>
+                <li>Question – An issue or PR that needs more information or a user question</li>
+            </ul>
+        <li>Not Included</li>
+            <ul>
+                <li>Priority: They would add complexity and overhead due to the discussions, but could help with the roadmap</li>
+                <li>Technology Labels: It can create too much overhead, as properly tag with technologies all the issues could be time consuming</li>
+            </ul>
         </ul>
-    <li>Milestone Descriptions</li>
+    </ul>
+    <li>[Ian Bicking Blog](https://www.ianbicking.org/blog/2014/03/use-github-issues-to-organize-a-project.html)</li>
+    <ul>
+        <li>Milestone Overview</li>
         <ul>
-        <li>Stuff we are doing right now: this is the “main” milestone. We give it a name (like Alpha 2 or Strawberry Rhubarb Pie) and we write down what we are trying to accomplish with the milestone. We create a new milestone when we are ready for the next iteration.</li>
-        <li>Stuff we’ll probably do soon: this is a standing “**Next Tasks**” milestone. We never change or rename this milestone.</li>
-            <ul><li>We use a permanent “Next Tasks” milestone (as opposed to renaming it to “Alpha 3” or actual-next-iteration milestone) because we don’t want to presume or default to including something in the real next iteration. When we’re ready to start planning the next iteration we’ll create a new milestone, and only deliberately move things into that milestone.</li></ul>
-        <li>Stuff we probably won’t do soon: this is a standing “**Blue Sky**” milestone. We refer to these tickets and sometimes look through them, but they are easy to ignore, somewhat intentionally ignored.</li>
-        <li>What aren’t we sure about?: issues with no milestone.</li>
+            <li>What are we doing right now?</li>
+            <li>What aren’t we doing right now?</li>
+                <ul>
+                    <li>2a. Stuff we’ll probably do soon</li>
+                    <li>2b. Stuff we probably won’t do soon</li>
+                </ul>
+            <li>What aren’t we sure about?</li>
         </ul>
-    <li>Label: “Needs Discussion” - (addressed in a triage meeting) - use liberally for either big or small tickets</li>
-    <li>“It’s better to give people more power: it’s actually helpful if people can overreach because it is an opportunity to establish where the limits really are and what purpose those limits have”</li>
+        <li>Milestone Descriptions</li>
+        <ul>
+            <li>Stuff we are doing right now: this is the “main” milestone. We give it a name (like Alpha 2 or Strawberry Rhubarb Pie) and we write down what we are trying to accomplish with the milestone. We create a new milestone when we are ready for the next iteration.</li>
+            <li>Stuff we’ll probably do soon: this is a standing “**Next Tasks**” milestone. We never change or rename this milestone.</li>
+                <ul><li>We use a permanent “Next Tasks” milestone (as opposed to renaming it to “Alpha 3” or actual-next-iteration milestone) because we don’t want to presume or default to including something in the real next iteration. When we’re ready to start planning the next iteration we’ll create a new milestone, and only deliberately move things into that milestone.</li></ul>
+            <li>Stuff we probably won’t do soon: this is a standing “**Blue Sky**” milestone. We refer to these tickets and sometimes look through them, but they are easy to ignore, somewhat intentionally ignored.</li>
+            <li>What aren’t we sure about?: issues with no milestone.</li>
+        </ul>
+        <li>Label: “Needs Discussion” - (addressed in a triage meeting) - use liberally for either big or small tickets</li>
+        <li>“It’s better to give people more power: it’s actually helpful if people can overreach because it is an opportunity to establish where the limits really are and what purpose those limits have”</li>
     </ul>
 </ul>
 </details>
@@ -970,13 +868,15 @@
 <li><a href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md#styleguides">Commit Messages</a> and <a href="https://news.ycombinator.com/item?id=8874177">why use the present tense</a></li>
 <li><a href="https://github.com/erlang/otp/wiki/Writing-good-commit-messages">Github&rsquo;s Advice on Github</a></li>
 <li><a href="https://chris.beams.io/posts/git-commit/">Most Comprehensive Guide</a></li>
-<li><a href="https://git-scm.com/book/en/v2">Git Pro Book (free)</a></li>
+<li><a href="https://git-scm.com/book/en/v2">Git Pro Book (free)</a><ul>
 <li><a href="https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash">Bash Tab-Completion Snippet</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="python">Python<a class="headerlink" href="#python" title="Permanent link">⚓︎</a></h2>
 <p><strong>TODO: Revisit</strong></p>
 <ul>
-<li>Python Style Guides</li>
+<li>Python Style Guides<ul>
 <li><a href="https://gist.github.com/sloria/7001839">https://gist.github.com/sloria/7001839</a></li>
 <li><a href="http://www.nilunder.com/blog/2013/08/03/pythonic-sensibilities/">http://www.nilunder.com/blog/2013/08/03/pythonic-sensibilities/</a></li>
 <li><a href="https://innoq.github.io/cards42org_en/">https://innoq.github.io/cards42org_en/</a></li>
@@ -985,19 +885,24 @@
 <li><a href="https://docs.python-guide.org/writing/reading/">https://docs.python-guide.org/writing/reading/</a></li>
 <li><a href="https://realpython.com/python-refactoring/">https://realpython.com/python-refactoring/</a></li>
 </ul>
+</li>
+</ul>
 <h2 id="adrs">ADRs<a class="headerlink" href="#adrs" title="Permanent link">⚓︎</a></h2>
 <p><strong>TODO: Revisit</strong></p>
 <ul>
-<li>Examples</li>
+<li>Examples<ul>
 <li><a href="https://github.com/pawamoy/mkdocstrings/issues/28">https://github.com/pawamoy/mkdocstrings/issues/28</a></li>
 </ul>
+</li>
+</ul>
+<p>&lt;&ndash; Links &ndash;&gt;</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 27, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 7, 2022</span>
       
         <br>
         Created:
@@ -1026,7 +931,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../SECURITY/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Security" rel="prev">
+        <a href="../DEVELOPER_GUIDE/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Developer Notes" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1035,20 +940,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Security
+              Developer Notes
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../modules/cz_legacy/" class="md-footer__link md-footer__link--next" aria-label="Next: cz_legacy" rel="next">
+        <a href="../../modules/cz_legacy/" class="md-footer__link md-footer__link--next" aria-label="Next: Cz legacy" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              cz_legacy
+              Cz legacy
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1079,10 +984,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "toc.autohide"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.autohide"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d691e9de.min.js"></script>
+      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       
