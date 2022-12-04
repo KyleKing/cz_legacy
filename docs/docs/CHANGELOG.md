@@ -1,5 +1,7 @@
 ## Unreleased
 
+## 0.1.7 (2022-09-17)
+
 ### Fix
 
 - update the version files list

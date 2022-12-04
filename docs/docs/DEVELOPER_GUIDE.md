@@ -53,5 +53,5 @@ poetry run doit run lock document deploy_docs publish
 | `cz_legacy/cz_legacy.py` |           17 |         0 |          0 | 100.0%     |
 | **Totals**               |           22 |         0 |          0 | 100.0%     |
 
-Generated on: 2022-09-17
+Generated on: 2022-12-03
 <!-- {cte} -->
