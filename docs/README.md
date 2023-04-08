@@ -72,9 +72,9 @@ If you have any security issue to report, please contact the project maintainers
 
 [LICENSE]
 
-[changelog]: ./docs/CHANGELOG.md
-[code_tag_summary]: ./docs/CODE_TAG_SUMMARY.md
+[changelog]: https://cz_legacy.kyleking.me/docs/CHANGELOG
+[code_tag_summary]: https://cz_legacy.kyleking.me/docs/CODE_TAG_SUMMARY
 [contributor-covenant]: https://www.contributor-covenant.org
-[developer_guide]: ./docs/DEVELOPER_GUIDE.md
-[license]: https://github.com/kyleking/cz_legacy/LICENSE
-[style_guide]: ./docs/STYLE_GUIDE.md
+[developer_guide]: https://cz_legacy.kyleking.me/docs/DEVELOPER_GUIDE
+[license]: https://github.com/kyleking/cz_legacy/blob/main/LICENSE
+[style_guide]: https://cz_legacy.kyleking.me/docs/STYLE_GUIDE

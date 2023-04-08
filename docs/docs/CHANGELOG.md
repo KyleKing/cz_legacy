@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Fix
+
+- don't extend Calcipy
+
 ## 0.1.7 (2022-09-17)
 
 ### Fix
