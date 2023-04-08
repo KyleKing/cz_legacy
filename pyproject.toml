@@ -1,39 +1,13 @@
 [build-system]
 build-backend = "poetry.core.masonry.api"
-requires = [
-  "poetry-core",
-]
-
-[tool.isort]
-balanced_wrapping = true
-default_section = "THIRDPARTY"
-force_grid_wrap = 0
-include_trailing_comma = true
-known_first_party = "cz_legacy"
-length_sort = false
-line_length = 120
-multi_line_output = 5
-
-[tool.calcipy.test]
-pythons = ["3.8"]
+requires = ["poetry-core"]
 
 [tool.commitizen]
-name = "cz_conventional_commits"
 version = "0.1.7"
-version_files = ["pyproject.toml", "cz_legacy/__init__.py"]
+version_files = ["pyproject.toml:^version", "cz_legacy/__init__.py:^__version"]
 
 [tool.poetry]
-name = "cz_legacy"
-version = "0.1.7"
-description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
-license = "MIT"
 authors = ["Kyle King <dev.act.kyle@gmail.com>"]
-maintainers = []
-repository = "https://github.com/kyleking/cz_legacy"
-documentation = "https://github.com/kyleking/cz_legacy/docs"
-readme = "docs/README.md"
-include = ["LICENSE.md"]
-keywords = ["commitizen", "conventional commits", "git"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
@@ -46,10 +20,16 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: Implementation :: CPython",
 ] # https://pypi.org/classifiers/
-
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/kyleking/cz_legacy/issues"
-"Changelog" = "https://github.com/kyleking/cz_legacy/blob/main/docs/docs/CHANGELOG.md"
+description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
+documentation = "https://cz_legacy.kyleking.me"
+include = ["LICENSE"]
+keywords = ["commitizen", "conventional commits", "git"]
+license = "MIT"
+maintainers = []
+name = "cz_legacy"
+readme = "docs/README.md"
+repository = "https://github.com/kyleking/cz_legacy"
+version = "0.1.7"
 
 [tool.poetry.dependencies]
 # Keep in sync with commitizen
@@ -58,15 +38,16 @@ python = "^3.6.2"
 commitizen = ">=2.0.0"
 
 [tool.poetry.group.dev.dependencies]
-# FYI: pycln and dataclasses do not support Python 3.6
-calcipy = { version = ">=0.17.0", extras = [
-    "dev",
-    "lint",
-    "test",
-], python = "^3.8.4" }
-mdx-truly-sane-lists = ">=1.3"
-mkdocs-build-plantuml-plugin = ">=1.7.4"
-mkdocs-gen-files = { version = ">=0.4.0", python = "^3.8.4" }
-mkdocs-literate-nav = { version = ">=0.5.0", python = "^3.8.4" }
-mkdocs-section-index = { version = ">=0.3.4", python = "^3.8.4" }
-mkdocstrings-python = { version = ">=0.8.2", python = "^3.8.4" }
+calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=1.2.1", python = "^3.8.12"}
+typing-extensions = {version = "*", python = "^3.8.12"}
+
+[tool.poetry.scripts]
+cz_legacy = "cz_legacy.scripts:start"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/kyleking/cz_legacy/issues"
+"Changelog" = "https://github.com/kyleking/cz_legacy/blob/main/docs/docs/CHANGELOG.md"
+
+[tool.pyright]
+include = ["cz_legacy"]
+pythonVersion = "3.8"
