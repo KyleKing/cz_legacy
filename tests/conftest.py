@@ -1,13 +1,13 @@
 """PyTest configuration."""
 
 from pathlib import Path
-from typing import List, Tuple
 
 import pytest
-from calcipy.dot_dict import ddict  # PLANNED: DDICT_TYPE
+from beartype import beartype
+from beartype.typing import List
+from calcipy.dot_dict import ddict
 from commitizen import defaults, git
 from commitizen.config import BaseConfig
-from beartype import beartype
 
 from .configuration import TEST_TMP_CACHE, clear_test_cache
 from .constants import ANSWERS, COMMITS_DATA, TAGS
@@ -27,6 +27,7 @@ def fix_test_cache() -> Path:
 
 
 @pytest.fixture()
+@beartype
 def config() -> BaseConfig:
     """Create default configuration.
 
@@ -56,7 +57,7 @@ def config() -> BaseConfig:
         ),
     ],
 )
-def messages(request: List[Tuple[dict, str]]):  # -> DDICT_TYPE:
+def messages(request):  # noqa: RBT001
     """Fixture for raw answer and expected formatted commit message.
 
     Args:
@@ -70,6 +71,7 @@ def messages(request: List[Tuple[dict, str]]):  # -> DDICT_TYPE:
 
 
 @pytest.fixture()
+@beartype
 def gitcommits() -> List[git.GitCommit]:
     """Generate list of Git Commits.
 
@@ -88,6 +90,7 @@ def gitcommits() -> List[git.GitCommit]:
 
 
 @pytest.fixture()
+@beartype
 def tags() -> List[git.GitTag]:
     """Generate list of Git tTags.
 

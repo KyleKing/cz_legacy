@@ -5,7 +5,7 @@
 ```sh
 git clone https://github.com/kyleking/cz_legacy.git
 cd cz_legacy
-poetry install --sync 
+poetry install --sync
 
 # See the available tasks
 poetry run calcipy
