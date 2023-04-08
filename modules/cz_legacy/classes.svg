@@ -13,14 +13,14 @@
 <g id="node1" class="node">
 <title>cz_legacy.cz_legacy._LegacyCz</title>
 <polygon fill="none" stroke="black" points="0,-0.5 0,-114.5 183,-114.5 183,-0.5 0,-0.5"/>
-<text text-anchor="middle" x="91.5" y="-99.3" font-family="Times,serif" font-size="14.00">_LegacyCz</text>
+<text text-anchor="start" x="53.5" y="-99.3" font-family="Times,serif" font-size="14.00">_LegacyCz</text>
 <polyline fill="none" stroke="black" points="0,-91.5 183,-91.5 "/>
 <text text-anchor="start" x="8" y="-76.3" font-family="Times,serif" font-size="14.00">bump_pattern : str</text>
 <text text-anchor="start" x="8" y="-61.3" font-family="Times,serif" font-size="14.00">change_type_map</text>
 <text text-anchor="start" x="8" y="-46.3" font-family="Times,serif" font-size="14.00">changelog_pattern : str</text>
 <text text-anchor="start" x="8" y="-31.3" font-family="Times,serif" font-size="14.00">commit_parser : str</text>
 <polyline fill="none" stroke="black" points="0,-23.5 183,-23.5 "/>
-<text text-anchor="middle" x="91.5" y="-8.3" font-family="Times,serif" font-size="14.00"> </text>
+<text text-anchor="start" x="89" y="-8.3" font-family="Times,serif" font-size="14.00"> </text>
 </g>
 </g>
 </svg>
