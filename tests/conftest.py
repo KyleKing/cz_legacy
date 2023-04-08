@@ -1,26 +1,20 @@
-"""PyTest configuration.
-
-Note: the calcipy imports are required for a nicer test HTML report
-
-"""
+"""PyTest configuration."""
 
 from pathlib import Path
 from typing import List, Tuple
 
 import pytest
-from calcipy.dev.conftest import pytest_configure  # noqa: F401
-from calcipy.dev.conftest import pytest_html_results_table_header  # noqa: F401
-from calcipy.dev.conftest import pytest_html_results_table_row  # noqa: F401
-from calcipy.dev.conftest import pytest_runtest_makereport  # noqa: F401
 from calcipy.dot_dict import ddict  # PLANNED: DDICT_TYPE
 from commitizen import defaults, git
 from commitizen.config import BaseConfig
+from beartype import beartype
 
 from .configuration import TEST_TMP_CACHE, clear_test_cache
 from .constants import ANSWERS, COMMITS_DATA, TAGS
 
 
 @pytest.fixture()
+@beartype
 def fix_test_cache() -> Path:
     """Fixture to clear and return the test cache directory for use.
 
