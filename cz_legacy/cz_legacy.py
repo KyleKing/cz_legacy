@@ -17,7 +17,7 @@ New = "New (old)"
 """Example custom TOML file configuration. Note: should be kept consistent with the README."""
 
 
-class _LegacyCz(ConventionalCommitsCz):
+class _LegacyCz(ConventionalCommitsCz):  # type: ignore[misc]
 
     def __init__(self, config: BaseConfig) -> None:  # noqa: RBT002
         """Initialize the class and override the data members.
@@ -40,7 +40,10 @@ class _LegacyCz(ConventionalCommitsCz):
         joined_types = '|'.join([*cz_legacy_map.keys()])
 
         self.commit_parser = defaults.commit_parser.replace('<change_type>', f'<change_type>{joined_types}|')
-        self.change_type_map = {**self.change_type_map, **cz_legacy_map}
+        self.change_type_map = {
+            **self.change_type_map,  # type: ignore[has-type]
+            **cz_legacy_map,
+        }
 
         extended_pattern = defaults.bump_pattern.replace('refactor', f'refactor|{joined_types}')
         self.bump_pattern = extended_pattern

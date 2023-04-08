@@ -47,8 +47,8 @@ poetry config pypi-token.pypi ...
 | File                     |   Statements |   Missing |   Excluded | Coverage   |
 |--------------------------|--------------|-----------|------------|------------|
 | `cz_legacy/__init__.py`  |            5 |         0 |          0 | 100.0%     |
-| `cz_legacy/cz_legacy.py` |           17 |         0 |          0 | 100.0%     |
-| **Totals**               |           22 |         0 |          0 | 100.0%     |
+| `cz_legacy/cz_legacy.py` |           18 |         0 |          0 | 100.0%     |
+| **Totals**               |           23 |         0 |          0 | 100.0%     |
 
-Generated on: 2022-12-03
+Generated on: 2023-04-08
 <!-- {cte} -->

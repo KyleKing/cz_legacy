@@ -38,7 +38,7 @@ python = "^3.7"
 commitizen = ">=2.0.0"
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], python = "^3.8.12", version = ">=1.2.1"}
+calcipy = {extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], python = "^3.8.12", version = ">=1.2.3"}
 
 [tool.poetry.scripts]
 cz_legacy = "cz_legacy.scripts:start"
