@@ -4,6 +4,9 @@
 
 - don't extend Calcipy
 
+
+- partially sync with latest copier
+
 ## 0.1.7 (2022-09-17)
 
 ### Fix

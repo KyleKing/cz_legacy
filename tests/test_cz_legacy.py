@@ -75,14 +75,17 @@ def test_render_changelog_unsupported_type(config):
         changelog_pattern=changelog_pattern,
         change_type_map=cz.change_type_map,
     )
-    expected = '\n'.join([
-        '\n## Unreleased',
-        '\n### Feat',
-        '\n- started commitizen',
-        '\n### Change (Old)',
-        '\n- some legacy commit with changes',
-        '',
-    ])
+    expected = """
+## Unreleased
+
+### Feat
+
+- started commitizen
+
+### Change (Old)
+
+- some legacy commit with changes
+"""
 
     result = changelog.render_changelog(tree)
 
