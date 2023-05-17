@@ -1,8 +1,16 @@
 ## Unreleased
 
+### Feat
+
+- migrate to new Entrypoint plugin format
+
 ### Fix
 
 - don't extend Calcipy
+
+### Refactor
+
+- bump minimum pymdown dependency
 
 
 - partially sync with latest copier
