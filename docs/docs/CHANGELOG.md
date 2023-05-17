@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0rc0 (2023-05-16)
 
 ### Feat
 
@@ -10,6 +10,7 @@
 
 ### Refactor
 
+- move EntryPoint config to pyproject.toml
 - bump minimum pymdown dependency
 
 
