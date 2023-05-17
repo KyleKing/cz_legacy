@@ -5,7 +5,7 @@ from commitizen import changelog, git
 from commitizen.config import BaseConfig
 from commitizen.exceptions import CustomError
 
-from cz_legacy import discover_this
+from cz_legacy.cz_legacy import _LegacyCz
 
 from .configuration import PATH_TEST_CHANGELOG
 from .constants import CHANGELOG_TREE
@@ -17,12 +17,12 @@ def test_missing_legacy_map():
     match = r'User must specify a `cz_legacy_map` dict in `\[tool.commitizen\]`. Example:\n\[tool.commitizen\]\n'
 
     with pytest.raises(CustomError, match=match):
-        discover_this(_config)
+        _LegacyCz(_config)
 
 
 def test_message(config, messages):
-    """Test discover_this.message."""
-    cz = discover_this(config)
+    """Test _LegacyCz.message."""
+    cz = _LegacyCz(config)
 
     message = cz.message(messages.answer)  # act
 
@@ -31,7 +31,7 @@ def test_message(config, messages):
 
 def test_generate_tree_from_commits(config, gitcommits, tags):
     """Test generating the changelog tree."""
-    cz = discover_this(config)
+    cz = _LegacyCz(config)
     parser = cz.commit_parser
     changelog_pattern = cz.bump_pattern
 
@@ -42,7 +42,7 @@ def test_generate_tree_from_commits(config, gitcommits, tags):
 
 def test_render_changelog(config, gitcommits, tags):
     """Test generating the changelog content with the user-specified mapping."""
-    cz = discover_this(config)
+    cz = _LegacyCz(config)
     parser = cz.commit_parser
     changelog_pattern = cz.bump_pattern
     tree = changelog.generate_tree_from_commits(
@@ -60,7 +60,7 @@ def test_render_changelog(config, gitcommits, tags):
 
 def test_render_changelog_unsupported_type(config):
     """Test that unsupported types are excluded from the changelog content."""
-    cz = discover_this(config)
+    cz = _LegacyCz(config)
     parser = cz.commit_parser
     changelog_pattern = cz.bump_pattern
     gitcommits = [
