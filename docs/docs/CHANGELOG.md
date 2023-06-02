@@ -1,3 +1,11 @@
+## Unreleased
+
+## 1.0.0 (2023-05-16)
+
+### Fix
+
+- remove unnecessary scripts configuration
+
 ## 1.0.0rc0 (2023-05-16)
 
 ### Feat
