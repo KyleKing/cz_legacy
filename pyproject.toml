@@ -38,7 +38,7 @@ python = "^3.7"
 commitizen = ">=3.0.0"
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {python = "^3.8.12", extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=1.2.4"}
+calcipy = {python = "^3.8.12", extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=1.6.3"}
 
 # Required for discovery by 'commitizen'
 [tool.poetry.plugins."commitizen.plugin"]
