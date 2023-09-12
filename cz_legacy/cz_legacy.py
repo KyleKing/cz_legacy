@@ -19,7 +19,7 @@ New = "New (old)"
 
 class _LegacyCz(ConventionalCommitsCz):  # type: ignore[misc]
 
-    def __init__(self, config: BaseConfig) -> None:  # noqa: RBT002
+    def __init__(self, config: BaseConfig) -> None:
         """Initialize the class and override the data members.
 
         Args:

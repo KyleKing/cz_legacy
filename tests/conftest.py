@@ -57,7 +57,7 @@ def config() -> BaseConfig:
         ),
     ],
 )
-def messages(request):  # noqa: RBT001
+def messages(request):
     """Fixture for raw answer and expected formatted commit message.
 
     Args:
