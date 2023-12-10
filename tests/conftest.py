@@ -1,5 +1,6 @@
 """PyTest configuration."""
 
+from itertools import starmap
 from pathlib import Path
 
 import pytest
@@ -98,4 +99,4 @@ def tags() -> List[git.GitTag]:
         List[git.GitTag]: tags from `TAGS`
 
     """
-    return [git.GitTag(*tag) for tag in TAGS]
+    return list(starmap(git.GitTag, TAGS))

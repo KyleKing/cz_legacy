@@ -50,5 +50,5 @@ poetry config pypi-token.pypi ...
 | `cz_legacy/cz_legacy.py` |           18 |         0 |          0 | 100.0%     |
 | **Totals**               |           35 |         0 |         17 | 100.0%     |
 
-Generated on: 2023-10-14
+Generated on: 2023-12-10
 <!-- {cte} -->
