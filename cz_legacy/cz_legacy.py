@@ -1,6 +1,5 @@
 """Support legacy commit tags specified in toml file."""
 
-from commitizen import defaults
 from commitizen.config.base_config import BaseConfig
 from commitizen.cz.conventional_commits.conventional_commits import ConventionalCommitsCz
 from commitizen.exceptions import CustomError
@@ -39,12 +38,13 @@ class _LegacyCz(ConventionalCommitsCz):  # type: ignore[misc]
             )
         joined_types = '|'.join([*cz_legacy_map.keys()])
 
-        self.commit_parser = defaults.commit_parser.replace('<change_type>', f'<change_type>{joined_types}|')
+        self.commit_parser = ConventionalCommitsCz.commit_parser.replace(
+            '<change_type>', f'<change_type>{joined_types}|')
         self.change_type_map = {
             **self.change_type_map,  # type: ignore[has-type]
             **cz_legacy_map,
         }
 
-        extended_pattern = defaults.bump_pattern.replace('refactor', f'refactor|{joined_types}')
+        extended_pattern = ConventionalCommitsCz.bump_pattern.replace('refactor', f'refactor|{joined_types}')
         self.bump_pattern = extended_pattern
         self.changelog_pattern = extended_pattern
