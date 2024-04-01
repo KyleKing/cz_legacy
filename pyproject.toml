@@ -50,4 +50,10 @@ calcipy = {python = "^3.9.13", extras = ["ddict", "doc", "lint", "nox", "stale",
 
 [tool.pyright]
 include = ["cz_legacy"]
-pythonVersion = "3.7"
+pythonVersion = "3.8"
+
+[tool.tomlsort]
+all = true
+in_place = true
+sort_first = ["python"]
+trailing_comma_inline_array = true
