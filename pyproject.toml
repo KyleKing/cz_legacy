@@ -39,6 +39,7 @@ commitizen = ">=3.0.0"
 
 [tool.poetry.group.dev.dependencies]
 calcipy = {python = "^3.9.13", extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=2.0.1"}
+mkdocs_build_plantuml_plugin = "1.9.0" # Issue with Python 3.8 and unknown Path.walk()
 
 # Required for discovery by 'commitizen'
 [tool.poetry.plugins."commitizen.plugin"]

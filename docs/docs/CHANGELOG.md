@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Fix
+
+- **#15**: replace defaults with CZ variants
+
 ## 1.0.0 (2023-05-16)
 
 ### Fix

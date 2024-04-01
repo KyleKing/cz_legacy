@@ -17,7 +17,6 @@ New = "New (old)"
 
 
 class _LegacyCz(ConventionalCommitsCz):  # type: ignore[misc]
-
     def __init__(self, config: BaseConfig) -> None:
         """Initialize the class and override the data members.
 
@@ -38,8 +37,13 @@ class _LegacyCz(ConventionalCommitsCz):  # type: ignore[misc]
             )
         joined_types = '|'.join([*cz_legacy_map.keys()])
 
+        if not ConventionalCommitsCz.commit_parser or not ConventionalCommitsCz.bump_pattern:  # for pyright
+            raise NotImplementedError('Try downgrading commitizen. Missing required config')
+
         self.commit_parser = ConventionalCommitsCz.commit_parser.replace(
-            '<change_type>', f'<change_type>{joined_types}|')
+            '<change_type>',
+            f'<change_type>{joined_types}|',
+        )
         self.change_type_map = {
             **self.change_type_map,  # type: ignore[has-type]
             **cz_legacy_map,

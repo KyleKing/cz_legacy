@@ -5,7 +5,7 @@ from commitizen import changelog, git
 from commitizen.config import BaseConfig
 from commitizen.exceptions import CustomError
 
-from cz_legacy.cz_legacy import _LegacyCz
+from cz_legacy.cz_legacy import _LegacyCz  # noqa: PLC2701
 
 from .configuration import PATH_TEST_CHANGELOG
 from .constants import CHANGELOG_TREE
