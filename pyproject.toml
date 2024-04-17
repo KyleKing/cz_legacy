@@ -35,6 +35,7 @@ version = "1.0.1"
 # Keep in sync with commitizen (Note: v3 will be ^3.7)
 # https://github.com/commitizen-tools/commitizen/blob/378a42881891633d8a81939cb46426eb36ed01aa/pyproject.toml#L50
 python = "^3.7"
+beartype = {python = "^3.8.0", version = ">=0.18.2"}
 commitizen = ">=3.0.0"
 
 [tool.poetry.group.dev.dependencies]
