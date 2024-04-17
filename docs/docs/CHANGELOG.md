@@ -2,6 +2,13 @@
 
 ### Fix
 
+- install beartype
+
+## 1.0.1 (2024-03-31)
+
+### Fix
+
+- resolve CI failures
 - **#15**: replace defaults with CZ variants
 
 ## 1.0.0 (2023-05-16)
