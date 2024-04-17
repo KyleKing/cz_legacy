@@ -5,7 +5,7 @@ from enum import Enum
 from os import getenv
 from warnings import filterwarnings
 
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 __pkg_name__ = 'cz_legacy'
 
 
