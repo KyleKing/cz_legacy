@@ -1,5 +1,10 @@
 ## Unreleased
 
+### Fix
+
+- resolve test and type errors
+- drop Python 3.7 and update minimum commitizen
+
 ## 1.0.2 (2024-04-16)
 
 ### Fix

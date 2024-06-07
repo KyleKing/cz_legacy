@@ -2,13 +2,13 @@
 
 import pytest
 from commitizen import changelog, git
-from commitizen.config import BaseConfig
+from commitizen.changelog_formats import guess_changelog_format
+from commitizen.config.base_config import BaseConfig
 from commitizen.exceptions import CustomError
 
-from cz_legacy.cz_legacy import _LegacyCz  # noqa: PLC2701
+from cz_legacy.cz_legacy import _LegacyCz
 
 from .configuration import PATH_TEST_CHANGELOG
-from .constants import CHANGELOG_TREE
 
 
 def test_missing_legacy_map():
@@ -29,22 +29,29 @@ def test_message(config, messages):
     assert message == messages.expected
 
 
-def test_generate_tree_from_commits(config, gitcommits, tags):
+def test_generate_tree_from_commits(config, gitcommits, tags, snapshot_json):
     """Test generating the changelog tree."""
     cz = _LegacyCz(config)
     parser = cz.commit_parser
+    assert parser
     changelog_pattern = cz.bump_pattern
+    assert changelog_pattern
 
     tree = changelog.generate_tree_from_commits(gitcommits, tags, parser, changelog_pattern)  # act
 
-    assert tuple(tree) == CHANGELOG_TREE
+    assert tuple(tree) == snapshot_json()
 
 
 def test_render_changelog(config, gitcommits, tags):
     """Test generating the changelog content with the user-specified mapping."""
     cz = _LegacyCz(config)
     parser = cz.commit_parser
+    assert parser
     changelog_pattern = cz.bump_pattern
+    assert changelog_pattern
+    changelog_format = guess_changelog_format('CHANGELOG.md')
+    assert changelog_format
+    template = changelog_format(config).template
     tree = changelog.generate_tree_from_commits(
         commits=gitcommits,
         tags=tags,
@@ -53,7 +60,7 @@ def test_render_changelog(config, gitcommits, tags):
         change_type_map=cz.change_type_map,
     )
 
-    result = changelog.render_changelog(tree)
+    result = changelog.render_changelog(tree, loader=cz.template_loader, template=template)
 
     assert result == PATH_TEST_CHANGELOG.read_text()
 
@@ -62,7 +69,12 @@ def test_render_changelog_unsupported_type(config):
     """Test that unsupported types are excluded from the changelog content."""
     cz = _LegacyCz(config)
     parser = cz.commit_parser
+    assert parser
     changelog_pattern = cz.bump_pattern
+    assert changelog_pattern
+    changelog_format = guess_changelog_format('CHANGELOG.md')
+    assert changelog_format
+    template = changelog_format(config).template
     gitcommits = [
         git.GitCommit(rev='003', title='feat: started commitizen', body=''),
         git.GitCommit(rev='002', title='Chg: some legacy commit with changes', body=''),
@@ -87,6 +99,6 @@ def test_render_changelog_unsupported_type(config):
 - some legacy commit with changes
 """
 
-    result = changelog.render_changelog(tree)
+    result = changelog.render_changelog(tree, loader=cz.template_loader, template=template)
 
     assert result == expected
