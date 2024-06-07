@@ -44,9 +44,6 @@ files = [
     {file = "argcomplete-3.1.2.tar.gz", hash = "sha256:d5d1e5efd41435260b8f85673b74ea2e883affcbec9f4230c582689e8e78251b"},
 ]
 
-[package.dependencies]
-importlib-metadata = {version = ">=0.23,<7", markers = "python_version < \"3.8\""}
-
 [package.extras]
 test = ["coverage", "mypy", "pexpect", "ruff", "wheel"]
 
@@ -84,21 +81,6 @@ files = [
 typing-extensions = {version = ">=4.0.0", markers = "python_version < \"3.11\""}
 
 [[package]]
-name = "autopep8"
-version = "2.2.0"
-description = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "autopep8-2.2.0-py2.py3-none-any.whl", hash = "sha256:05418a981f038969d8bdcd5636bf15948db7555ae944b9f79b5a34b35f1370d4"},
-    {file = "autopep8-2.2.0.tar.gz", hash = "sha256:d306a0581163ac29908280ad557773a95a9bede072c0fafed6f141f5311f43c1"},
-]
-
-[package.dependencies]
-pycodestyle = ">=2.11.0"
-tomli = {version = "*", markers = "python_version < \"3.11\""}
-
-[[package]]
 name = "babel"
 version = "2.15.0"
 description = "Internationalization utilities"
@@ -113,28 +95,18 @@ files = [
 dev = ["freezegun (>=1.0,<2.0)", "pytest (>=6.0)", "pytest-cov"]
 
 [[package]]
-name = "bandit"
-version = "1.7.8"
-description = "Security oriented static analyser for python code."
+name = "basedpyright"
+version = "1.12.5"
+description = "static type checking for Python (but based)"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "bandit-1.7.8-py3-none-any.whl", hash = "sha256:509f7af645bc0cd8fd4587abc1a038fc795636671ee8204d502b933aee44f381"},
-    {file = "bandit-1.7.8.tar.gz", hash = "sha256:36de50f720856ab24a24dbaa5fee2c66050ed97c1477e0a1159deab1775eab6b"},
+    {file = "basedpyright-1.12.5-py3-none-any.whl", hash = "sha256:ccfb19c35de47028919b46ed35304497e2d85aaa73c298ab1212674fd0d40a6b"},
+    {file = "basedpyright-1.12.5.tar.gz", hash = "sha256:b7e1dcd87b5b6194bb3957cef79471d87c4943db386d7dd3adda02b2508d7052"},
 ]
 
 [package.dependencies]
-colorama = {version = ">=0.3.9", markers = "platform_system == \"Windows\""}
-PyYAML = ">=5.3.1"
-rich = "*"
-stevedore = ">=1.20.0"
-
-[package.extras]
-baseline = ["GitPython (>=3.1.30)"]
-sarif = ["jschema-to-python (>=1.2.3)", "sarif-om (>=1.0.4)"]
-test = ["beautifulsoup4 (>=4.8.0)", "coverage (>=4.5.4)", "fixtures (>=3.0.0)", "flake8 (>=4.0.0)", "pylint (==1.9.4)", "stestr (>=2.5.0)", "testscenarios (>=0.5.0)", "testtools (>=2.3.0)"]
-toml = ["tomli (>=1.1.0)"]
-yaml = ["PyYAML"]
+nodejs-wheel-binaries = ">=20.13.1"
 
 [[package]]
 name = "beartype"
@@ -178,66 +150,62 @@ files = [
 
 [[package]]
 name = "calcipy"
-version = "2.0.4"
+version = "3.0.0"
 description = "Python package to simplify development"
 optional = false
-python-versions = ">=3.9.13,<4.0.0"
+python-versions = "<4.0.0,>=3.9.13"
 files = [
-    {file = "calcipy-2.0.4-py3-none-any.whl", hash = "sha256:951e454f73d935c94f6e66dd702ea455e67404bd60c84e9523f946e4cf317b5c"},
-    {file = "calcipy-2.0.4.tar.gz", hash = "sha256:2b411d22813adeac8aec88ba3c40fe79deeba4dcdcb96aa90a9517c37f134757"},
+    {file = "calcipy-3.0.0-py3-none-any.whl", hash = "sha256:d5ecbc0ce316e427faa793d485eb9bb40f508b1fe6b4b958ee9d55b61a99cf68"},
+    {file = "calcipy-3.0.0.tar.gz", hash = "sha256:dd659742707261e21be367047a53bf7e62d9b88949eb2e8fb4448a078e829ed8"},
 ]
 
 [package.dependencies]
 arrow = {version = ">=1.2.3", optional = true, markers = "extra == \"stale\" or extra == \"tags\""}
-autopep8 = {version = ">=2.0.1", optional = true, markers = "extra == \"lint\""}
-bandit = {version = ">=1.7.4", optional = true, markers = "extra == \"lint\""}
-beartype = ">=0.16.4"
+basedpyright = {version = ">=1.6.0", optional = true, markers = "extra == \"types\""}
+beartype = ">=0.18.2"
 bidict = {version = ">=0.22.1", optional = true, markers = "extra == \"stale\""}
-commitizen = {version = ">=2.42.0", optional = true, markers = "extra == \"doc\""}
-corallium = ">=0.3.3"
-griffe = ">=0.32.3"
+commitizen = {version = ">=3.22.0", optional = true, markers = "extra == \"doc\""}
+corallium = ">=1.0.3"
 httpx = {version = ">=0.24.1", optional = true, markers = "extra == \"stale\""}
 invoke = ">=2.2.0"
 mkdocs = {version = ">=1.5.3", optional = true, markers = "extra == \"doc\""}
-mkdocs-build-plantuml-plugin = {version = ">=1.7.4", optional = true, markers = "extra == \"doc\""}
+mkdocs-build-plantuml-plugin = {version = ">=1.9.0,<1.10.0 || >1.10.0", optional = true, markers = "extra == \"doc\""}
 mkdocs-gen-files = {version = ">=0.4.0", optional = true, markers = "extra == \"doc\""}
 mkdocs-git-revision-date-localized-plugin = {version = ">=1.0.1", optional = true, markers = "extra == \"doc\""}
 mkdocs-include-markdown-plugin = {version = ">=4.0.3", optional = true, markers = "python_version < \"3.12\" and extra == \"doc\""}
 mkdocs-literate-nav = {version = ">=0.5.0", optional = true, markers = "extra == \"doc\""}
 mkdocs-material = {version = ">=9.4.8", optional = true, markers = "extra == \"doc\""}
 mkdocs-section-index = {version = ">=0.3.4", optional = true, markers = "extra == \"doc\""}
-mkdocstrings = {version = ">=0.21.1", extras = ["python"], optional = true, markers = "extra == \"doc\""}
+mkdocstrings = {version = ">=0.24.2", extras = ["python"], optional = true, markers = "extra == \"doc\""}
 mypy = {version = ">=1.0.0", optional = true, markers = "extra == \"types\""}
-nox-poetry = {version = ">=1.0.2", optional = true, markers = "extra == \"nox\""}
+nox-poetry = {version = ">=1.0.3", optional = true, markers = "extra == \"nox\""}
 pandas = {version = ">=1.5.3", optional = true, markers = "extra == \"doc\" or extra == \"tags\""}
-pip-check = {version = ">=2.8.1", optional = true, markers = "extra == \"lint\""}
-pydantic = ">=2.4.2"
+pydantic = ">=2.7.0"
 pylint = {version = ">=3.0.2", optional = true, markers = "extra == \"doc\" or extra == \"pylint\""}
 pymdown-extensions = {version = ">=10.0.1", optional = true, markers = "extra == \"doc\""}
 pyrate_limiter = {version = ">=3.0.2", optional = true, markers = "extra == \"stale\""}
 pytest = {version = ">=7.2.1", optional = true, markers = "extra == \"test\""}
-pytest-cov = {version = ">=4.0.0", optional = true, markers = "extra == \"test\""}
+pytest-cov = {version = ">=5.0.0", optional = true, markers = "extra == \"test\""}
 pytest-randomly = {version = ">=3.12.0", optional = true, markers = "extra == \"test\""}
-pytest-watcher = {version = ">=0.2.6", optional = true, markers = "extra == \"test\""}
+pytest-watcher = {version = ">=0.4.2", optional = true, markers = "extra == \"test\""}
 python-box = {version = ">=6.0.2", optional = true, markers = "extra == \"ddict\""}
 pyyaml = {version = ">=5.2", optional = true, markers = "extra == \"doc\" or extra == \"tags\""}
-ruff = {version = ">=0.1.5", optional = true, markers = "extra == \"lint\""}
-semver = ">=3.0.1"
+ruff = {version = ">=0.4.8", optional = true, markers = "extra == \"lint\""}
 tabulate = {version = ">=0.9.0", optional = true, markers = "extra == \"tags\""}
 transitions = {version = ">=0.9.0", optional = true, markers = "extra == \"doc\""}
 virtualenv = {version = ">=20.24.0", optional = true, markers = "extra == \"nox\""}
 
 [package.extras]
 ddict = ["python-box (>=6.0.2)"]
-doc = ["commitizen (>=2.42.0)", "mkdocs (>=1.5.3)", "mkdocs-build-plantuml-plugin (>=1.7.4)", "mkdocs-gen-files (>=0.4.0)", "mkdocs-git-revision-date-localized-plugin (>=1.0.1)", "mkdocs-include-markdown-plugin (>=4.0.3)", "mkdocs-literate-nav (>=0.5.0)", "mkdocs-material (>=9.4.8)", "mkdocs-section-index (>=0.3.4)", "mkdocstrings[python] (>=0.21.1)", "pandas (>=1.5.3)", "pylint (>=3.0.2)", "pymdown-extensions (>=10.0.1)", "pyyaml (>=5.2)", "transitions (>=0.9.0)"]
-flake8 = ["dlint (>=0.14.0)", "flake8 (>=6.0.0)", "flake8-adjustable-complexity (>=0.0.6)", "flake8-annotations-complexity (>=0.0.7)", "flake8-expression-complexity (>=0.0.11)", "flake8-printf-formatting (>=1.1.2)", "flake8-sql (>=0.4.1)", "flake8-string-format (>=0.3.0)"]
-lint = ["autopep8 (>=2.0.1)", "bandit (>=1.7.4)", "pip-check (>=2.8.1)", "ruff (>=0.1.5)"]
-nox = ["nox-poetry (>=1.0.2)", "virtualenv (>=20.24.0)"]
+doc = ["commitizen (>=3.22.0)", "mkdocs (>=1.5.3)", "mkdocs-build-plantuml-plugin (>=1.9.0,!=1.10.0)", "mkdocs-gen-files (>=0.4.0)", "mkdocs-git-revision-date-localized-plugin (>=1.0.1)", "mkdocs-include-markdown-plugin (>=4.0.3)", "mkdocs-literate-nav (>=0.5.0)", "mkdocs-material (>=9.4.8)", "mkdocs-section-index (>=0.3.4)", "mkdocstrings[python] (>=0.24.2)", "pandas (>=1.5.3)", "pylint (>=3.0.2)", "pymdown-extensions (>=10.0.1)", "pyyaml (>=5.2)", "transitions (>=0.9.0)"]
+experimental = ["griffe (>=0.45.2)", "semver (>=3.0.2)"]
+lint = ["ruff (>=0.4.8)"]
+nox = ["nox-poetry (>=1.0.3)", "virtualenv (>=20.24.0)"]
 pylint = ["pylint (>=3.0.2)"]
 stale = ["arrow (>=1.2.3)", "bidict (>=0.22.1)", "httpx (>=0.24.1)", "pyrate_limiter (>=3.0.2)"]
 tags = ["arrow (>=1.2.3)", "pandas (>=1.5.3)", "pyyaml (>=5.2)", "tabulate (>=0.9.0)"]
-test = ["pytest (>=7.2.1)", "pytest-cov (>=4.0.0)", "pytest-randomly (>=3.12.0)", "pytest-watcher (>=0.2.6)"]
-types = ["mypy (>=1.0.0)"]
+test = ["pytest (>=7.2.1)", "pytest-cov (>=5.0.0)", "pytest-randomly (>=3.12.0)", "pytest-watcher (>=0.4.2)"]
+types = ["basedpyright (>=1.6.0)", "mypy (>=1.0.0)"]
 
 [[package]]
 name = "certifi"
@@ -393,45 +361,44 @@ development = ["black", "flake8", "mypy", "pytest", "types-colorama"]
 
 [[package]]
 name = "commitizen"
-version = "3.9.1"
+version = "3.27.0"
 description = "Python commitizen client tool"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = ">=3.8"
 files = [
-    {file = "commitizen-3.9.1-py3-none-any.whl", hash = "sha256:2d2133fb4798d156475f937e9f8950327ffa79ef663dee1a940229c791f3095e"},
-    {file = "commitizen-3.9.1.tar.gz", hash = "sha256:30d756bd8ae669c4a1e641148d22069ef588713b0e437eb6012e7dacac370e1e"},
+    {file = "commitizen-3.27.0-py3-none-any.whl", hash = "sha256:11948fa563d5ad5464baf09eaacff3cf8cbade1ca029ed9c4978f2227f033130"},
+    {file = "commitizen-3.27.0.tar.gz", hash = "sha256:5874d0c7e8e1be3b75b1b0a2269cffe3dd5c843b860d84b0bdbb9ea86e3474b8"},
 ]
 
 [package.dependencies]
-argcomplete = ">=1.12.1,<3.2"
+argcomplete = ">=1.12.1,<3.4"
 charset-normalizer = ">=2.1.0,<4"
 colorama = ">=0.4.1,<0.5.0"
 decli = ">=0.6.0,<0.7.0"
-importlib_metadata = ">=4.13,<7"
+importlib_metadata = ">=4.13,<8"
 jinja2 = ">=2.10.3"
 packaging = ">=19"
 pyyaml = ">=3.08"
-questionary = ">=1.4.0,<2.0.0"
+questionary = ">=2.0,<3.0"
 termcolor = ">=1.1,<3"
 tomlkit = ">=0.5.3,<1.0.0"
-typing-extensions = {version = ">=4.0.1,<5.0.0", markers = "python_version < \"3.8\""}
 
 [[package]]
 name = "corallium"
-version = "1.0.0"
+version = "2.0.0"
 description = "Shared functionality for the calcipy-ecosystem"
 optional = false
 python-versions = "<4.0.0,>=3.9.13"
 files = [
-    {file = "corallium-1.0.0-py3-none-any.whl", hash = "sha256:5c6b50a810acda41c4c0cb3969b3d302494648a4ae7e34c50e005938232fcbc4"},
-    {file = "corallium-1.0.0.tar.gz", hash = "sha256:b7d8a05ff01be7bf4ac4a321c6d8712a57c2205a8d09813511211295177b4e0b"},
+    {file = "corallium-2.0.0-py3-none-any.whl", hash = "sha256:ae753ec2dbfe917ed82bb8fed7d68c00f0a74841a2a93727e949a88f3c5d5e6f"},
+    {file = "corallium-2.0.0.tar.gz", hash = "sha256:c2790a359288463ce388c836258f26c3edac5b25f975645f93b817a7bd2ed5d1"},
 ]
 
 [package.dependencies]
 beartype = ">=0.18.2"
-pydantic = ">=2.7.0"
 rich = ">=13.7.1"
 tomli = {version = ">=2.0.1", markers = "python_version < \"3.11\""}
+typing-extensions = ">=4.12.0"
 
 [[package]]
 name = "coverage"
@@ -723,7 +690,6 @@ files = [
 ]
 
 [package.dependencies]
-typing-extensions = {version = ">=3.6.4", markers = "python_version < \"3.8\""}
 zipp = ">=0.5"
 
 [package.extras]
@@ -1227,6 +1193,22 @@ files = [
 ]
 
 [[package]]
+name = "nodejs-wheel-binaries"
+version = "20.14.0"
+description = "unoffical Node.js package"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "nodejs_wheel_binaries-20.14.0-py2.py3-none-macosx_10_15_x86_64.whl", hash = "sha256:b877d28dee5ad53eb4522db80866d87238bbe13c1324e38ecf4fc420a367c051"},
+    {file = "nodejs_wheel_binaries-20.14.0-py2.py3-none-macosx_11_0_arm64.whl", hash = "sha256:bad91d58999ea3d3c2dfe5d8cbd1a982d8c3cfa57a28cf81a5244dbb89e6f075"},
+    {file = "nodejs_wheel_binaries-20.14.0-py2.py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:42421946e1f16f4f7327d1c9629c31de918cb8069e8ec47a38c6fff47a2de354"},
+    {file = "nodejs_wheel_binaries-20.14.0-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2e0f02502426b442f29ac35590737a152e1d99e194820fe159208efdd854b491"},
+    {file = "nodejs_wheel_binaries-20.14.0-py2.py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:e46f3fae0a99cfb6610531b9713380b417524efc6fb1077decd00b3ababfb7e6"},
+    {file = "nodejs_wheel_binaries-20.14.0-py2.py3-none-win_amd64.whl", hash = "sha256:056be3bab4181b07ea8ea56b7464919b4cee12af77a24435341c94b5eca8572e"},
+    {file = "nodejs_wheel_binaries-20.14.0.tar.gz", hash = "sha256:38e4b1b4dee08898da5fb9d813d1653162fd0e6f4ec83dc6615b2432f1fa90aa"},
+]
+
+[[package]]
 name = "nox"
 version = "2024.4.15"
 description = "Flexible test automation."
@@ -1415,44 +1397,6 @@ files = [
 ]
 
 [[package]]
-name = "pbr"
-version = "6.0.0"
-description = "Python Build Reasonableness"
-optional = false
-python-versions = ">=2.6"
-files = [
-    {file = "pbr-6.0.0-py2.py3-none-any.whl", hash = "sha256:4a7317d5e3b17a3dccb6a8cfe67dab65b20551404c52c8ed41279fa4f0cb4cda"},
-    {file = "pbr-6.0.0.tar.gz", hash = "sha256:d1377122a5a00e2f940ee482999518efe16d745d423a670c27773dfbc3c9a7d9"},
-]
-
-[[package]]
-name = "pip"
-version = "24.0"
-description = "The PyPA recommended tool for installing Python packages."
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "pip-24.0-py3-none-any.whl", hash = "sha256:ba0d021a166865d2265246961bec0152ff124de910c5cc39f1156ce3fa7c69dc"},
-    {file = "pip-24.0.tar.gz", hash = "sha256:ea9bd1a847e8c5774a5777bb398c19e80bcd4e2aa16a4b301b718fe6f593aba2"},
-]
-
-[[package]]
-name = "pip-check"
-version = "2.8.1"
-description = "Display installed pip packages and their update status.."
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "pip-check-2.8.1.tar.gz", hash = "sha256:76d6abd49b1cd4b2db8752da685c2fae2eae39349efc2adeccf49cb148264d3b"},
-    {file = "pip_check-2.8.1-py2.py3-none-any.whl", hash = "sha256:f0b0761bb4b321da6f8d108b0111c22087203fb9fde96c392afc4fe663246bff"},
-]
-
-[package.dependencies]
-packaging = "*"
-pip = ">=9"
-terminaltables = "*"
-
-[[package]]
 name = "platformdirs"
 version = "4.2.2"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
@@ -1485,28 +1429,17 @@ testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "prompt-toolkit"
-version = "3.0.46"
+version = "3.0.36"
 description = "Library for building powerful interactive command lines in Python"
 optional = false
-python-versions = ">=3.7.0"
+python-versions = ">=3.6.2"
 files = [
-    {file = "prompt_toolkit-3.0.46-py3-none-any.whl", hash = "sha256:45abe60a8300f3c618b23c16c4bb98c6fc80af8ce8b17c7ae92db48db3ee63c1"},
-    {file = "prompt_toolkit-3.0.46.tar.gz", hash = "sha256:869c50d682152336e23c4db7f74667639b5047494202ffe7670817053fd57795"},
+    {file = "prompt_toolkit-3.0.36-py3-none-any.whl", hash = "sha256:aa64ad242a462c5ff0363a7b9cfe696c20d55d9fc60c11fd8e632d064804d305"},
+    {file = "prompt_toolkit-3.0.36.tar.gz", hash = "sha256:3e163f254bef5a03b146397d7c1963bd3e2812f0964bb9a24e6ec761fd28db63"},
 ]
 
 [package.dependencies]
 wcwidth = "*"
-
-[[package]]
-name = "pycodestyle"
-version = "2.11.1"
-description = "Python style guide checker"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "pycodestyle-2.11.1-py2.py3-none-any.whl", hash = "sha256:44fe31000b2d866f2e41841b18528a505fbd7fef9017b04eff4e2648a0fadc67"},
-    {file = "pycodestyle-2.11.1.tar.gz", hash = "sha256:41ba0e7afc9752dfb53ced5489e89f8186be00e599e712660695b7a75ff2663f"},
-]
 
 [[package]]
 name = "pydantic"
@@ -1901,20 +1834,17 @@ pyyaml = "*"
 
 [[package]]
 name = "questionary"
-version = "1.10.0"
+version = "2.0.1"
 description = "Python library to build pretty command line user prompts ⭐️"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = ">=3.8"
 files = [
-    {file = "questionary-1.10.0-py3-none-any.whl", hash = "sha256:fecfcc8cca110fda9d561cb83f1e97ecbb93c613ff857f655818839dac74ce90"},
-    {file = "questionary-1.10.0.tar.gz", hash = "sha256:600d3aefecce26d48d97eee936fdb66e4bc27f934c3ab6dd1e292c4f43946d90"},
+    {file = "questionary-2.0.1-py3-none-any.whl", hash = "sha256:8ab9a01d0b91b68444dff7f6652c1e754105533f083cbe27597c8110ecc230a2"},
+    {file = "questionary-2.0.1.tar.gz", hash = "sha256:bcce898bf3dbb446ff62830c86c5c6fb9a22a54146f0f5597d3da43b10d8fc8b"},
 ]
 
 [package.dependencies]
-prompt_toolkit = ">=2.0,<4.0"
-
-[package.extras]
-docs = ["Sphinx (>=3.3,<4.0)", "sphinx-autobuild (>=2020.9.1,<2021.0.0)", "sphinx-autodoc-typehints (>=1.11.1,<2.0.0)", "sphinx-copybutton (>=0.3.1,<0.4.0)", "sphinx-rtd-theme (>=0.5.0,<0.6.0)"]
+prompt_toolkit = ">=2.0,<=3.0.36"
 
 [[package]]
 name = "regex"
@@ -2070,17 +2000,6 @@ files = [
 ]
 
 [[package]]
-name = "semver"
-version = "3.0.2"
-description = "Python helper for Semantic Versioning (https://semver.org)"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "semver-3.0.2-py3-none-any.whl", hash = "sha256:b1ea4686fe70b981f85359eda33199d60c53964284e0cfb4977d243e37cf4bf4"},
-    {file = "semver-3.0.2.tar.gz", hash = "sha256:6253adb39c70f6e51afed2fa7152bcd414c411286088fb4b9effb133885ab4cc"},
-]
-
-[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -2114,20 +2033,6 @@ files = [
 ]
 
 [[package]]
-name = "stevedore"
-version = "5.2.0"
-description = "Manage dynamic plugins for Python applications"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "stevedore-5.2.0-py3-none-any.whl", hash = "sha256:1c15d95766ca0569cad14cb6272d4d31dae66b011a929d7c18219c176ea1b5c9"},
-    {file = "stevedore-5.2.0.tar.gz", hash = "sha256:46b93ca40e1114cea93d738a6c1e365396981bb6bb78c27045b7587c9473544d"},
-]
-
-[package.dependencies]
-pbr = ">=2.0.0,<2.1.0 || >2.1.0"
-
-[[package]]
 name = "tabulate"
 version = "0.9.0"
 description = "Pretty-print tabular data"
@@ -2154,17 +2059,6 @@ files = [
 
 [package.extras]
 tests = ["pytest", "pytest-cov"]
-
-[[package]]
-name = "terminaltables"
-version = "3.1.10"
-description = "Generate simple tables in terminals from a nested list of strings."
-optional = false
-python-versions = ">=2.6"
-files = [
-    {file = "terminaltables-3.1.10-py2.py3-none-any.whl", hash = "sha256:e4fdc4179c9e4aab5f674d80f09d76fa436b96fdc698a8505e0a36bf0804a874"},
-    {file = "terminaltables-3.1.10.tar.gz", hash = "sha256:ba6eca5cb5ba02bba4c9f4f985af80c54ec3dccf94cfcd190154386255e47543"},
-]
 
 [[package]]
 name = "tomli"
@@ -2219,13 +2113,13 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.7.1"
-description = "Backported and Experimental Type Hints for Python 3.7+"
+version = "4.12.1"
+description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.7.1-py3-none-any.whl", hash = "sha256:440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36"},
-    {file = "typing_extensions-4.7.1.tar.gz", hash = "sha256:b75ddc264f0ba5615db7ba217daeb99701ad295353c45f9e95963337ceeeffb2"},
+    {file = "typing_extensions-4.12.1-py3-none-any.whl", hash = "sha256:6024b58b69089e5a89c347397254e35f1bf02a907728ec7fee9bf0fe837d203a"},
+    {file = "typing_extensions-4.12.1.tar.gz", hash = "sha256:915f5e35ff76f56588223f15fdd5938f9a1cf9195c0de25130c627e4d597f6d1"},
 ]
 
 [[package]]
@@ -2362,5 +2256,5 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.7"
-content-hash = "52c17ee0bba5b12e29f77e2a7b835a3f217c8eb19d51954117bc9584379e2837"
+python-versions = "^3.8"
+content-hash = "4a3ebe9720759c27380bc30d63faded8f66ee4cb844d83fab2cc83334b8c3e63"
