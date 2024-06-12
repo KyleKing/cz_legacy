@@ -150,13 +150,13 @@ files = [
 
 [[package]]
 name = "calcipy"
-version = "3.0.0"
+version = "3.0.1"
 description = "Python package to simplify development"
 optional = false
 python-versions = "<4.0.0,>=3.9.13"
 files = [
-    {file = "calcipy-3.0.0-py3-none-any.whl", hash = "sha256:d5ecbc0ce316e427faa793d485eb9bb40f508b1fe6b4b958ee9d55b61a99cf68"},
-    {file = "calcipy-3.0.0.tar.gz", hash = "sha256:dd659742707261e21be367047a53bf7e62d9b88949eb2e8fb4448a078e829ed8"},
+    {file = "calcipy-3.0.1-py3-none-any.whl", hash = "sha256:2fedc6564ad4b2d16c02c8bd8571732688fe76ed102b80a3da05e86be8918993"},
+    {file = "calcipy-3.0.1.tar.gz", hash = "sha256:f9e409dbfda2c6e9fbc379958dc547bafbf8a883e8676f7b5fd3a8f6c5db8680"},
 ]
 
 [package.dependencies]
@@ -2271,4 +2271,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "1068ffd07865991a86a28757b653632e2c2fe05052ca28a0fdc714acef067805"
+content-hash = "8828f2a36a489296b1e63c3977923a7bfee4a550dd1eb975d90d3c593310201e"

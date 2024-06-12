@@ -1,18 +1,24 @@
 """PyTest configuration."""
 
+from __future__ import annotations
+
 from itertools import starmap
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 import pytest
 from beartype import beartype
-from beartype.typing import List
 from calcipy.dot_dict import ddict
 from commitizen import defaults, git
-from commitizen.config import BaseConfig
+from commitizen.config.base_config import BaseConfig
 from syrupy.extensions.json import JSONSnapshotExtension
 
 from .configuration import TEST_TMP_CACHE, clear_test_cache
 from .constants import ANSWERS, COMMITS_DATA, TAGS
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from beartype.typing import List
 
 
 @pytest.fixture()
@@ -44,9 +50,10 @@ def config() -> BaseConfig:
         BaseConfig: base commitizen configuration
 
     """
+    # https://github.com/commitizen-tools/commitizen/blob/7fce6670fdc44f994243babf37ba873f8c6ae587/commitizen/config/base_config.py#L8-L12
     _config = BaseConfig()
     _config.settings.update({'name': defaults.name})
-    _config.settings.update({'cz_legacy_map': {'Chg': 'Change (Old)'}})
+    _config.settings.update({'cz_legacy_map': {'Chg': 'Change (Old)'}})  # type: ignore[reportCallIssue]
     return _config
 
 

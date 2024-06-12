@@ -58,7 +58,7 @@ beartype = ">=0.18.2"
 commitizen = ">=3.27.0"
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {python = "^3.9.13", extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=3.0.0"}
+calcipy = {python = "^3.9.13", extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=3.0.1"}
 syrupy = {python = "^3.9", version = ">=4.6.1"}
 
 # Required for discovery by 'commitizen'
