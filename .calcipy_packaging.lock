@@ -80,12 +80,12 @@
         "version": "2.4"
     },
     "calcipy": {
-        "datetime": "2024-06-07T11:44:17.564126+00:00",
+        "datetime": "2024-06-12T23:23:26.764481+00:00",
         "domain": "https://pypi.org/pypi/{name}/json",
-        "latest_datetime": "2024-06-07T11:44:17.564126+00:00",
-        "latest_version": "3.0.0",
+        "latest_datetime": "2024-06-12T23:23:26.764481+00:00",
+        "latest_version": "3.0.1",
         "name": "calcipy",
-        "version": "3.0.0"
+        "version": "3.0.1"
     },
     "certifi": {
         "datetime": "2024-06-02T01:45:23.134166+00:00",
