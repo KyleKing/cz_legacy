@@ -3,7 +3,7 @@ build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]
 
 [tool.commitizen]
-version = "1.0.2"
+version = "2.0.0"
 version_files = ["cz_legacy/__init__.py:^__version", "pyproject.toml:^version"]
 
 [tool.mypy]
@@ -49,7 +49,7 @@ maintainers = []
 name = "cz_legacy"
 readme = "docs/README.md"
 repository = "https://github.com/kyleking/cz_legacy"
-version = "1.0.2"
+version = "2.0.0"
 
 [tool.poetry.dependencies]
 # Keep Python support consistent with commitizen
