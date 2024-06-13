@@ -30,6 +30,8 @@ At minimum, you must have the `name = "cz_legacy"` and `[tool.commitizen.cz_lega
 
 Below is an example of the three change legacy types Chg, Fix, and New, but the user can choose any tag names and associated mapping for the Changelog
 
+<!--Note: keep below tmol in-sync with 'EXAMPLE' used in the error message-->
+
 ```toml
 [tool.commitizen]
 name = "cz_legacy"

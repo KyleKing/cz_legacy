@@ -1,0 +1,144 @@
+[
+  {
+    "changes": {
+      "feat": [
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "custom cz plugins now support bumping version",
+          "scope": null,
+          "sha1": "ddd220ad515502200fe2dde443614c1075d26238"
+        }
+      ]
+    },
+    "date": "2019-04-19",
+    "version": "v1.2.0"
+  },
+  {
+    "changes": {
+      "BREAKING CHANGE": [
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "API is stable",
+          "scope": null,
+          "sha1": "80105fb3c6d45369bc0cbf787bd329fba603864c"
+        }
+      ],
+      "feat": [
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "py3 only, tests and conventional commits 1.0",
+          "scope": null,
+          "sha1": "ed830019581c83ba633bfd734720e6758eca6061"
+        }
+      ],
+      "fix": [
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "commit message now fits better with semver",
+          "scope": "bump",
+          "sha1": "cbc7b5f22c4e74deff4bc92d14e19bd93524711e"
+        },
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "conventional commit \"breaking change\" in body instead of title",
+          "scope": null,
+          "sha1": "1ba46f2a63cb9d6e7472eaece21528c8cd28b118"
+        },
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "load config reads in order without failing if there is no commitizen section",
+          "scope": "config",
+          "sha1": "0326652b2657083929507ee66d4d1a0899e861ba"
+        },
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "parse scope (this is my punishment for not having tests)",
+          "scope": null,
+          "sha1": "5e837bf8ef0735193597372cd2d85e31a8f715b9"
+        },
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "parse scope empty",
+          "scope": null,
+          "sha1": "ca38eac6ff09870851b5c76a6ff0a2a8e5ecda15"
+        },
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "parse correctly again",
+          "scope": "scope",
+          "sha1": "9d4def716ef235a1fa5ae61614366423fbc8256f"
+        }
+      ],
+      "refactor": [
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "changed stdout statements",
+          "scope": null,
+          "sha1": "74c6134b1b2e6bb8b07ed53410faabe99b204f36"
+        },
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "command logic removed from commitizen base",
+          "scope": "schema",
+          "sha1": "c35dbffd1bb98bb0b3d1593797e79d1c3366af8f"
+        },
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "command logic removed from commitizen base",
+          "scope": "info",
+          "sha1": "25313397a4ac3dc5b5c986017bee2a614399509d"
+        },
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "removed delegator, added decli and many tests",
+          "scope": null,
+          "sha1": "80105fb3c6d45369bc0cbf787bd329fba603864c"
+        }
+      ]
+    },
+    "date": "2019-04-18",
+    "version": "v1.1.1"
+  },
+  {
+    "changes": {
+      "fix": [
+        {
+          "author": "",
+          "author_email": "",
+          "breaking": null,
+          "message": "future is now required for every python version",
+          "scope": "setup.py",
+          "sha1": "0fef73cd7dc77a25b82e197e7c1d3144a58c1350"
+        }
+      ]
+    },
+    "date": "2017-11-11",
+    "version": "v0.9.1"
+  }
+]

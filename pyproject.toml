@@ -3,8 +3,28 @@ build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]
 
 [tool.commitizen]
-version = "1.0.2"
+version = "2.0.0"
 version_files = ["cz_legacy/__init__.py:^__version", "pyproject.toml:^version"]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+enable_error_code = ["ignore-without-code", "possibly-undefined", "redundant-expr", "truthy-bool"]
+extra_checks = true
+files = ["cz_legacy", "tests"]
+no_implicit_reexport = true
+plugins = [
+  "pydantic.mypy", # Most settings are from: https://pydantic-docs.helpmanual.io/mypy_plugin
+]
+python_version = "3.8"
+show_column_numbers = true
+show_error_codes = true
+strict_equality = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
 
 [tool.poetry]
 authors = ["Kyle King <dev.act.kyle@gmail.com>"]
@@ -14,8 +34,8 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.6",
-  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: Implementation :: CPython",
@@ -23,23 +43,24 @@ classifiers = [
 description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
 documentation = "https://cz_legacy.kyleking.me"
 include = ["LICENSE"]
-keywords = ["commitizen", "conventional commits", "git"]
+keywords = ["calcipy_template", "commitizen", "conventional commits", "git"]
 license = "MIT"
 maintainers = []
 name = "cz_legacy"
 readme = "docs/README.md"
 repository = "https://github.com/kyleking/cz_legacy"
-version = "1.0.2"
+version = "2.0.0"
 
 [tool.poetry.dependencies]
-# Keep in sync with commitizen (Note: v3 will be ^3.7)
-# https://github.com/commitizen-tools/commitizen/blob/378a42881891633d8a81939cb46426eb36ed01aa/pyproject.toml#L50
-python = "^3.7"
-beartype = {python = "^3.8.0", version = ">=0.18.2"}
-commitizen = ">=3.0.0"
+# Keep Python support consistent with commitizen
+# https://github.com/commitizen-tools/commitizen/blob/7fce6670fdc44f994243babf37ba873f8c6ae587/pyproject.toml#L41
+python = "^3.8"
+beartype = ">=0.18.2"
+commitizen = ">=3.27.0"
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {python = "^3.9.13", extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=2.0.4"}
+calcipy = {python = "^3.9.13", extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=3.0.1"}
+syrupy = {python = "^3.9", version = ">=4.6.1"}
 
 # Required for discovery by 'commitizen'
 [tool.poetry.plugins."commitizen.plugin"]
@@ -49,9 +70,86 @@ calcipy = {python = "^3.9.13", extras = ["ddict", "doc", "lint", "nox", "stale",
 "Bug Tracker" = "https://github.com/kyleking/cz_legacy/issues"
 "Changelog" = "https://github.com/kyleking/cz_legacy/blob/main/docs/docs/CHANGELOG.md"
 
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+
 [tool.pyright]
-include = ["cz_legacy"]
+include = ["cz_legacy", "tests"]
 pythonVersion = "3.8"
+
+[tool.ruff]
+# Docs: https://github.com/charliermarsh/ruff
+# Tip: poetry run python -m ruff --explain RUF100
+line-length = 120
+target-version = 'py38'
+
+[tool.ruff.lint]
+ignore = [
+  'ANN002', # Missing type annotation for `*args`
+  'ANN003', # Missing type annotation for `**kwargs`
+  'ANN101', # Missing type annotation for `self` in method (automatically inferred)
+  'ANN102', # Missing type annotation for `cls` in classmethod (automatically inferred)
+  'BLE001', # Do not catch blind exception: `Exception`
+  'CPY001', # Missing copyright notice at top of file
+  'D203', # "1 blank line required before class docstring" (Conflicts with D211)
+  'D213', # "Multi-line docstring summary should start at the second line" (Conflicts with D212)
+  'EM101', # Exception must not use a string literal, assign to variable first
+  'FIX001', # Line contains FIXME
+  'FIX002', # Line contains TODO
+  'FIX004', # Line contains HACK
+  'PLR0913', # Too many arguments in function definition (6 > 5)
+  'TD001', # Invalid TODO tag: `FIXME`
+  'TD002', # Missing author in TODO; try: `# TODO(<author_name>): ...`
+  'TD003', # Missing issue link on the line following this TODO
+  'TRY003', # Avoid specifying long messages outside the exception class
+]
+preview = true
+select = ['ALL']
+unfixable = [
+  'ERA001', # Commented out code
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = 'single'
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+'invoke.collection.Collection'.msg = 'Use calcipy.cli.Collection instead.'
+'invoke.tasks.task'.msg = 'Use calcipy.cli.task instead.'
+'typing.Callable'.msg = 'Use beartype.typing.* instead.'
+'typing.Dict'.msg = 'Use beartype.typing.* instead.'
+'typing.List'.msg = 'Use beartype.typing.* instead.'
+'typing.Optional'.msg = 'Use beartype.typing.* instead.'
+'typing.Protocol'.msg = 'Use beartype.typing.* instead.'
+'typing.TypeVar'.msg = 'Use beartype.typing.* instead.'
+
+[tool.ruff.lint.isort]
+known-first-party = ['cz_legacy']
+
+[tool.ruff.lint.per-file-ignores]
+'./cz_legacy/../*.py' = [
+  'INP001', # File `/<>.py` is part of an implicit namespace package. Add an `__init__.py`.
+]
+'__init__.py' = [
+  'D104', # Missing docstring in public package
+]
+'scripts/*.py' = [
+  'INP001', # File `scripts/*.py` is part of an implicit namespace package. Add an `__init__.py`.
+]
+'scripts/check_imports.py' = [
+  'F401', # imported but unused; consider adding to __all__ or using a redundant alias
+]
+'tests/*.py' = [
+  'ANN001', # Missing type annotation for function argument
+  'ANN201', # Missing return type annotation for public function
+  'ANN202', # Missing return type annotation for private function `test_make_diffable`
+  'D100', # Missing docstring in public module
+  'D103', # Missing docstring in public function
+  'PLC2701', # Private name import `_<>` from external module
+  'PT004', # flake8-pytest-style: fixture does not return
+  'S101', # Use of `assert` detected
+]
 
 [tool.tomlsort]
 all = true

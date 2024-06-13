@@ -6,6 +6,7 @@
 git clone https://github.com/kyleking/cz_legacy.git
 cd cz_legacy
 poetry install --sync
+poetry run calcipy-pack pack.install-extras
 
 # See the available tasks
 poetry run calcipy
@@ -46,9 +47,9 @@ poetry config pypi-token.pypi ...
 <!-- {cts} COVERAGE -->
 | File                     |   Statements |   Missing |   Excluded | Coverage   |
 |--------------------------|--------------|-----------|------------|------------|
-| `cz_legacy/__init__.py`  |           20 |         2 |         17 | 90.0%      |
-| `cz_legacy/cz_legacy.py` |           19 |         1 |          0 | 91.3%      |
-| **Totals**               |           39 |         3 |         17 | 90.7%      |
+| `cz_legacy/__init__.py`  |           16 |         0 |         26 | 100.0%     |
+| `cz_legacy/cz_legacy.py` |           21 |         2 |          0 | 85.2%      |
+| **Totals**               |           37 |         2 |         26 | 90.7%      |
 
-Generated on: 2024-04-18
+Generated on: 2024-06-12
 <!-- {cte} -->

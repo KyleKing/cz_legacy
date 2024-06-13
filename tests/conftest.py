@@ -8,10 +8,16 @@ from beartype import beartype
 from beartype.typing import List
 from calcipy.dot_dict import ddict
 from commitizen import defaults, git
-from commitizen.config import BaseConfig
+from commitizen.config.base_config import BaseConfig
+from syrupy.extensions.json import JSONSnapshotExtension
 
 from .configuration import TEST_TMP_CACHE, clear_test_cache
 from .constants import ANSWERS, COMMITS_DATA, TAGS
+
+
+@pytest.fixture()
+def snapshot_json(snapshot):
+    return snapshot.use_extension(JSONSnapshotExtension)
 
 
 @pytest.fixture()
@@ -19,7 +25,8 @@ from .constants import ANSWERS, COMMITS_DATA, TAGS
 def fix_test_cache() -> Path:
     """Fixture to clear and return the test cache directory for use.
 
-    Returns:
+    Returns
+    -------
         Path: Path to the test cache directory
 
     """
@@ -32,13 +39,15 @@ def fix_test_cache() -> Path:
 def config() -> BaseConfig:
     """Create default configuration.
 
-    Returns:
+    Returns
+    -------
         BaseConfig: base commitizen configuration
 
     """
+    # https://github.com/commitizen-tools/commitizen/blob/7fce6670fdc44f994243babf37ba873f8c6ae587/commitizen/config/base_config.py#L8-L12
     _config = BaseConfig()
     _config.settings.update({'name': defaults.name})
-    _config.settings.update({'cz_legacy_map': {'Chg': 'Change (Old)'}})
+    _config.settings.update({'cz_legacy_map': {'Chg': 'Change (Old)'}})  # type: ignore[misc] # pyright: ignore[reportCallIssue]
     return _config
 
 
@@ -62,9 +71,11 @@ def messages(request):
     """Fixture for raw answer and expected formatted commit message.
 
     Args:
+    ----
         request: see https://docs.pytest.org/en/stable/fixture.html#fixture-parametrize
 
     Returns:
+    -------
         Box: raw commit `answer` and formatted `expected` message
 
     """
@@ -76,7 +87,8 @@ def messages(request):
 def gitcommits() -> List[git.GitCommit]:
     """Generate list of Git Commits.
 
-    Returns:
+    Returns
+    -------
         List[git.GitCommit]: commits from `COMMITS_DATA`
 
     """
@@ -95,7 +107,8 @@ def gitcommits() -> List[git.GitCommit]:
 def tags() -> List[git.GitTag]:
     """Generate list of Git tTags.
 
-    Returns:
+    Returns
+    -------
         List[git.GitTag]: tags from `TAGS`
 
     """
