@@ -1,5 +1,7 @@
 ## Unreleased
 
+## 2.0.0 (2024-06-12)
+
 ### Fix
 
 - resolve test and type errors
