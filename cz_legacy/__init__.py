@@ -8,7 +8,7 @@ with suppress(ImportError):
 
     configure_runtime_type_checking_mode()
 
-__version__ = '2.0.0'
+__version__ = '2.0.1'
 __pkg_name__ = 'cz_legacy'
 
 
