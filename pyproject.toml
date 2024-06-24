@@ -55,11 +55,11 @@ version = "2.0.0"
 # Keep Python support consistent with commitizen
 # https://github.com/commitizen-tools/commitizen/blob/7fce6670fdc44f994243babf37ba873f8c6ae587/pyproject.toml#L41
 python = "^3.8"
-beartype = ">=0.18.2"
 commitizen = ">=3.27.0"
+typing-extensions = ">=4.12.2"
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {python = "^3.9.13", extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=3.0.1"}
+calcipy = {python = "^3.9.13", extras = ["ddict", "doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=3.0.2"}
 syrupy = {python = "^3.9", version = ">=4.6.1"}
 
 # Required for discovery by 'commitizen'
@@ -115,7 +115,7 @@ unfixable = [
 inline-quotes = 'single'
 
 [tool.ruff.lint.flake8-tidy-imports.banned-api]
-'invoke.collection.Collection'.msg = 'Use calcipy.cli.Collection instead.'
+'invoke.collection.Collection'.msg = 'Use calcipy.collection.Collection instead.'
 'invoke.tasks.task'.msg = 'Use calcipy.cli.task instead.'
 'typing.Callable'.msg = 'Use beartype.typing.* instead.'
 'typing.Dict'.msg = 'Use beartype.typing.* instead.'
