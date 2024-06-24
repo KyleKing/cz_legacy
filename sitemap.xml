@@ -2,52 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cz_legacy.kyleking.me/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cz_legacy.kyleking.me/docs/Advanced_Documentation/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cz_legacy.kyleking.me/docs/CHANGELOG/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cz_legacy.kyleking.me/docs/CODE_TAG_SUMMARY/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cz_legacy.kyleking.me/docs/DEVELOPER_GUIDE/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cz_legacy.kyleking.me/docs/STYLE_GUIDE/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cz_legacy.kyleking.me/modules/cz_legacy/_code_diagrams/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cz_legacy.kyleking.me/reference/SUMMARY/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cz_legacy.kyleking.me/reference/cz_legacy/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cz_legacy.kyleking.me/reference/cz_legacy/_runtime_type_check_setup/</loc>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cz_legacy.kyleking.me/reference/cz_legacy/cz_legacy/</loc>
-         <lastmod>2024-06-13</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
