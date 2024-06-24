@@ -45,11 +45,12 @@ poetry config pypi-token.pypi ...
 ## Current Status
 
 <!-- {cts} COVERAGE -->
-| File                     |   Statements |   Missing |   Excluded | Coverage   |
-|--------------------------|--------------|-----------|------------|------------|
-| `cz_legacy/__init__.py`  |           16 |         0 |         26 | 100.0%     |
-| `cz_legacy/cz_legacy.py` |           21 |         2 |          0 | 85.2%      |
-| **Totals**               |           37 |         2 |         26 | 90.7%      |
+| File                                     |   Statements |   Missing |   Excluded | Coverage   |
+|------------------------------------------|--------------|-----------|------------|------------|
+| `cz_legacy/__init__.py`                  |            6 |         0 |          0 | 100.0%     |
+| `cz_legacy/_runtime_type_check_setup.py` |           13 |         0 |         28 | 100.0%     |
+| `cz_legacy/cz_legacy.py`                 |           21 |         2 |          0 | 85.2%      |
+| **Totals**                               |           40 |         2 |         28 | 91.7%      |
 
-Generated on: 2024-06-12
+Generated on: 2024-06-23
 <!-- {cte} -->
