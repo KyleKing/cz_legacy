@@ -1,5 +1,8 @@
 # cz_legacy
 
+> [!NOTE]
+> After using `commitizen` for a few years, the utility of `cz_legacy` for changelogs from years ago has become less valuable. [Based on public code](https://github.com/search?q=cz_legacy+language%3Atoml&type=code), this package doesn't appear to have use outside of my projects and therefore will be archived. If you have a use case for this project or questions, please feel free to submit an issue and tag me (@kyleking) here: https://github.com/KyleKing/calcipy
+
 Custom Commitizen parser for user-specified legacy change types. The parser utilizes the `cz_conventional_commits` pattern and extends with the tag mapping specified in the configuration file.
 
 While old change types will appear in the "Changelog", the user will be prevented from using them in new commits. This is the reverse of the [revert/chore logic](https://github.com/commitizen-tools/commitizen#why-are-revert-and-chore-valid-types-in-the-check-pattern-of-cz-conventional_commits-but-not-types-we-can-select) from commitizen that allows use of those commit types, but won't display them in the changelog.

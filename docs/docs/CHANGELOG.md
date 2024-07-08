@@ -1,10 +1,12 @@
 ## Unreleased
 
+## 2.0.1 (2024-06-23)
+
 ### Fix
 
 - add missing typing-extensions and make beartype optional
 
-## v2.0.0 (2024-06-12)
+## 2.0.0 (2024-06-12)
 
 ## 1.0.2 (2024-04-16)
 
